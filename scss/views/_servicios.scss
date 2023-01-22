@@ -1,0 +1,48 @@
+.titulo-servicios {
+    background-image: url("../images/colorada.jpg");
+    background-color: #00000020;
+    @include fix-image;
+    height: 900px;
+    color: $secondary-color; 
+    }
+
+
+#servicios-cards {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-items: center;
+    padding: 90px 0px; 
+    .servicios-cards {
+        height: 460px;
+        width: 320px;
+        border-radius: 10px;
+        padding-bottom: 10px;
+    .img-servicios {
+        height: 300px;
+        width: 320px;
+        border-radius: 10px;
+      @include fix-image }}}
+
+
+      @media (min-width: 720px) {
+        .titulo-servicios h3 {
+            padding-top: 40px;
+           }
+        .titulo-servicios {
+          height: 790px;
+          color: $secondary-color; } 
+          #servicios-cards .servicios-cards {
+            height: 560px;
+            width: 320px;
+            border-radius: 10px;
+            padding-bottom: 50px;
+        .img-servicios {
+            height: 300px;
+            width: 320px;
+            border-radius: 10px;
+          @include fix-image }}
+        }

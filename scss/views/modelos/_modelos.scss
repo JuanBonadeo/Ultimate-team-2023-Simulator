@@ -1,0 +1,66 @@
+
+
+.titulo-modelos{
+    color: #D7D7D7;
+    background-color: #FFB13C;
+    display: flex;
+    flex-direction: column;
+    height: 900px;
+    justify-content: center;
+    text-align: center;
+    background-image: url("../IMAGES/koiniseg\ \(2\).jpg");
+    @include fix-image;
+    h3{
+    margin-top: 5px;
+    font-size: medium;
+    color: #000000;
+}
+}
+
+#llegaron-modelos{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    padding-bottom: 40px;
+    color: #D7D7D7;
+    padding-top: 100px;
+    h2{
+    padding-bottom: 60px;
+    }
+    .cards-modelos {
+    color: #D7D7D7;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 200px;
+    width: 300px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+
+    @include fix-image;
+    }   
+}
+
+ 
+
+ @media (min-width:720px){
+    
+    #llegaron-modelos .container-llegaron{
+        width: 90%;
+        align-content: flex-end;
+        justify-content: space-evenly;
+    }
+    div{
+        display: flex;
+        flex-direction: row;
+        
+        flex-wrap: wrap;
+        cards-modelos {
+        padding: 40px 50px;
+        width: 100%;   
+        }   
+    }
+}

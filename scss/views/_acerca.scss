@@ -1,0 +1,82 @@
+#hero .titulo{
+    width: 100%;
+    p{
+        text-align: left;
+        color: $secondary-color;
+    }
+    h3{
+      color: $secondary-color;
+    }}
+    #hero .titulo p {
+        text-align: right;
+    }
+
+.hero-acerca h3 {
+    font-size: 1.1em; }
+  
+  .hero-acerca0 {
+    background-image: none;
+    height: 1400px;
+    background-image: url("../IMAGES/herobannerdesktop.jpg");
+  @include fix-image;
+    color: white; }
+  
+  .hero-acerca h1 {
+    padding-bottom: -40px; }
+  
+  .hero-acerca {
+    height: 1400px;
+    background-attachment: fixed; }
+  
+  .acerca1 {
+    background: $secondary-color;
+    text-align: end;
+    padding-left: 190px;
+    background-attachment: fixed;
+    background-image: url("../IMAGES/fangio.jpg");
+  @include fix-image; }
+  
+  .acerca {
+    color: $secondary-color; }
+  
+  .acerca2 {
+    background: $primary-color;
+    text-align: left;
+    padding-right: 190px;
+    padding-left: 10px;
+    background-attachment: fixed;
+    background-image: url("../IMAGES/vieja.jpg");
+  @include fix-image; }
+  
+  .acerca3 {
+    background: $secondary-color;
+    text-align: end;
+    padding-left: 190px;
+    background-attachment: fixed;
+    background-image: url("../images/Chevrolet_Corvette.jpg");
+  @include fix-image; }
+  
+  @media (min-width: 1138px) {
+    .hero-acerca h3 {
+      font-size: 1.6em; }
+    .hero-acerca0 {
+      background-image: url("../IMAGES/nissangtr.jpg");
+      height: 1200px; }
+    .hero-acerca h1 {
+      padding-bottom: -40px; }
+    .hero-acerca {
+      height: 1200px;
+      color: $secondary-color; }
+    .acerca1 {
+      padding-left: 890px;
+      padding-top: -100px; }
+    .acerca2 {
+      padding-right: 890px; }
+    .acerca3 {
+      padding-left: 890px; }
+    .footer-container acerca {
+      color: $third-color; } }
+
+      
+
+    

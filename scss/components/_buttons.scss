@@ -1,0 +1,18 @@
+.myButton {
+	background:linear-gradient(to bottom, #f7e14f 5%, #ffab23 100%);
+	background-color:#f7e14f;
+	border-radius:42px;
+	border:3px solid #ffaa22;
+	display:inline-block;
+	cursor:pointer;
+	color:#333333;
+	font-size:16px;
+	font-weight:bold;
+	padding:6px 21px;
+	text-decoration:none;
+    &:hover {
+	background:linear-gradient(to bottom, #ffab23 5%, #f7e14f 100%);
+	background-color:#ffab23;
+    color: rgb(119, 118, 118);
+    }
+}

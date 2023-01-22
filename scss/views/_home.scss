@@ -1,0 +1,95 @@
+
+.titulo{
+    width: min-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 500px;
+    color: $third-color;
+    background-image: linear-gradient(0deg,rgba(0, 0, 0, 0.442),rgba(0, 0, 0, 0.19)),
+    url("/images/hero.jpg");
+          @include fix-image;
+        background-color: $secondary-color;
+}
+.carouselExampleCaptions{
+    z-index: 0;
+    color: $third-color;
+}
+.carousel-item {
+    height: 700px;
+    position: relative;
+    
+ }
+  
+  .carousel-caption h5 {
+    font-size: 2.5em; }
+  
+  .carousel-1 {
+    background-image: url("../IMAGES/hero.jpg");
+    @include fix-image; 
+  }
+  
+  .carousel-2 {
+    background-image: url("../IMAGES/hero-mobile.jpg");
+    @include fix-image; }
+  
+  .carousel-3 {
+    background-image: url("../IMAGES/mustang.jpg");
+    @include fix-image; }
+  #nuestros-modelos{
+        display: flex;
+        align-items: center;
+        background: rgb(0, 0, 0);
+        color: #D7D7D7;
+        height: 800px;
+        flex-direction: column;
+        padding-top: 1em;
+            .cards-modelos {
+            color: $third-color;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            height: 200px;
+            width: 300px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            @include fix-image; 
+     
+    }
+    }
+    
+
+  @media (min-width: 720px) {
+    .carousel-3 {
+      background-image: url("../IMAGES/herobanner2.jpg");
+        @include fix-image; }
+    .carousel-2 {
+      background-image: url("../IMAGES/Aston'Martin.jpg");
+        @include fix-image; }
+    .carousel-1 {
+      background-image: url("../IMAGES/corvete.jpg");
+        @include fix-image; } 
+      #nuestros-modelos{
+        padding-top: 150px;
+        
+    }
+    .cards-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 60px 0px;justify-content: space-between;
+        width: 80%;
+    }
+    .cards-modelos{
+        font-size: larger;
+        height: 300px;
+        width: 385px;
+        padding-top: 40px;    .laferrari {
+        background-image: url("../../images/laferrari.jpg"); }
+        
+    }}
+  
+
+

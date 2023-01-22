@@ -1,0 +1,65 @@
+.nav-contacto {
+    margin-bottom: -100px; }
+  
+  #hero-container {
+    display: flex; }
+  
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 200px;
+    padding-bottom: 40px; }
+  
+  @-webkit-keyframes AnimationName {
+    0% {
+      background-position: 97% 0%; }
+    50% {
+      background-position: 4% 100%; }
+    100% {
+      background-position: 97% 0%; } }
+  
+  @-moz-keyframes AnimationName {
+    0% {
+      background-position: 97% 0%; }
+    50% {
+      background-position: 4% 100%; }
+    100% {
+      background-position: 97% 0%; } }
+  
+  @-o-keyframes AnimationName {
+    0% {
+      background-position: 97% 0%; }
+    50% {
+      background-position: 4% 100%; }
+    100% {
+      background-position: 97% 0%; } }
+  
+  @keyframes AnimationName {
+    0% {
+      background-position: 97% 0%; }
+    50% {
+      background-position: 4% 100%; }
+    100% {
+      background-position: 97% 0%; } }
+  
+  div input {
+    margin: 16px 0;
+    width: 320px;
+    border-radius: 5px; }
+  
+  .map-container {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 100px; }
+  
+  #hero-contactanos {
+    background: linear-gradient(343deg, #ffcd00, #ff0000, #ffc100, #ffc100, #ff0000);
+    background-size: 1000% 1000%;
+    -webkit-animation: AnimationName 8s ease infinite;
+    -moz-animation: AnimationName 8s ease infinite;
+    -o-animation: AnimationName 8s ease infinite;
+    animation: AnimationName 8s ease infinite; }
