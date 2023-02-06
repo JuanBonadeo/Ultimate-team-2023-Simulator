@@ -3,26 +3,288 @@
 	padding: 0;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
-}
-.container{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
-	color: rgb(0, 0, 0);
-	font-weight: 900;
-	/* background-image: url("../images/Messi&ney.jpg");
-	background-repeat: repeat;
-    background-size: cover;
-    background-position: center center; */
-	
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Cochin, Georgia, Times, 'Times New Roman', serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 h1{
-	font-size: 45px;
+	display: flex;
+	justify-content: center;
+  font-size: 3em;
 }
-h2{
-	font-size: 30px;
+h4{
+	margin-bottom: 0;
+}
+body{
+	background-color: #6f36ff;
+	height: max-content;
+}
+.global h4, .posicion h4{
+font-size: 1.55em;
+margin-left: .8em;
+}.global h4{
+  font-size: 2em;
+}
+.margint{
+	padding-top: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}	
+#cartas{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cartas{
+	width: 15rem; 
+	height: 23rem;
+	display: grid;
+	align-items: center;
+	padding-top: 1.8em;
+}
+.oro{
+  background-image: url(../images/cartas/oro.webp.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover ;
+}
+.icono{
+	background-image: url(../images/cartas/icono.webp.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover ;
+}
+.toty{
+background-image: url(../images/cartas/toty.webp.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover ;
+  color: #ffcd4e;
+}
+.totw{
+background-image: url(../images/cartas/totw.webp.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover ;
+  color: #f1f37d;
+}.future{
+background-image: url(../images/cartas/futurestar.webp.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover ;
+  color: #ffffff;
+}
+.cartas-container {  
+	display: grid; 
+  grid-template-columns: 0.7fr 1.4fr; 
+  grid-template-rows: 0.2fr 0.2fr 0.3fr 0.3fr 0.2fr 0.3fr 0.3fr 0.3fr; 
+  gap: 0px -30px; 
+  grid-template-areas: 
+    "global img"
+    "posicion img"
+    "pais img"
+    "club img"
+    "nombreApellido nombreApellido"
+    "card-stats card-stats"; 
+  justify-items: center; 
+  width: 70%; 
+}
+.posicion {
+  justify-self: center; 
+  align-self: center; 
+  grid-area: posicion;  
+}
+.global {
+  justify-self: center; 
+  align-self: center; 
+  grid-area: global;
+  font-weight: bold;
+}
+.pais {
+	display: flex;
+	justify-content: end; 
+	align-items: center;
+  grid-area: pais; 
+  height: 30px; width: 70px;  
+  margin-left: .9em;
+  margin-top: .5em;
+}
+.club {
+	display: flex;
+  justify-content: end; 
+  align-items: center; 
+  grid-area: club; 
+  height: 35px; width: 50px;
+  margin-left: 1.4em;
+  
+}
+.img {
+  justify-self: start; 
+  align-self: center; 
+  height: 10em; width: 9em;
+  grid-area: img; 
+}
+.nombreApellido {
+  justify-self: center; 
+  align-self: center; 
+  grid-area: nombreApellido;
+   
 }
 
-/* how to center a div?*/	
+.ritmo { grid-area: ritmo; }
+.regate { grid-area: regate; }
+.tiro { grid-area: tiro; }
+.pase { grid-area: pase; }
+.fisico { grid-area: fisico; }
+.defensa { grid-area: defensa; }
+
+.boton-comprar{
+	display: grid;
+	align-items: center;
+}
+.btnComprarVender{
+margin-top: 1em;
+margin-left: 1em;
+font-weight: 100;
+font-size: 14px;
+color: #ffffff;
+background-color: #23007d;
+padding: 10px 30px;
+border: none;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+border-radius: 20px 50px;
+transition : 300ms;
+transform: translateY(0);
+display: flex;
+flex-direction: row;
+align-items: center;
+cursor: pointer;
+text-transform: uppercase;
+}
+
+.btnComprarVender:hover{
+transition : 300ms;
+padding: 10px 25px;
+transform : translateY(-0px);
+background-color: #3b07bf;
+color: #000000;
+}
+
+#cartas-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.card-stats {
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr; 
+  grid-template-areas: 
+    "ritmo regate"
+    "tiro defensa"
+    "pase fisico"; 
+  justify-content: center; 
+  align-content: center; 
+  justify-items: center; 
+  align-items: center; 
+  justify-self: center; 
+  align-self: center; 
+  grid-area: card-stats; 
+  width: 80%; 
+  height: 40%; 
+  padding-top: .5em;
+}
+.card-stats p{
+	margin: 0;
+}
+
+
+/* NAV */
+.navcustom{
+  background-color: #000000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000000000000;
+}
+nav a{
+  font-size: 2em;
+}
+.nav-item *{
+  color: #6f36ff;
+}.container-fluid a{
+  font-size: 1em;
+}
+.container-fluid a:hover{
+  color: #3b07bf;
+}.container-fluid .navbar-brand {
+  font-size: 1.4em;
+  font-weight: bold;
+  cursor: default;
+}
+.container-fluid select{
+  background-color: #00000000;
+  border: none;
+  font-size: 1em ;
+  cursor:pointer;
+  gap: 5px;
+  margin: 0px 0.3em;
+}.container-fluid select option{
+ background-color: #000000;
+} .container-fluid .buscarPor{
+  width: min-content;
+}
+.navbar-toggler-icon{
+  background-color: #3b07bf;
+  border-radius: .3em;
+}#buscadorBtn{
+color: #000000;
+background-color: #3b07bf;
+border: none;
+transition: 200ms;
+}#buscadorBtn:hover{
+  color: #fff;
+background-color: #23007d;
+}
+/* Modal agregar jugador */
+.modal{
+  margin-top: 2em;
+}.modal-content{
+  background-color: #000000eb;
+  color: #6f36ff;
+}.modal-title{
+  font-weight: 700;
+}.modal-body form select{
+  border-radius: .5em;
+  background-color: #000000;
+  color: #fff;
+}.modal-body form input{
+  width: 3em;
+  border-radius: .2em;
+}.modal-body form #jugadorIngresado{
+  width: 7em;
+}.modal-body form #imgIngresado{
+  width: 12em;
+}.modal-body form .modal-stats{
+  margin-left: 8em;
+}.modal-body form label{
+  margin-left: 1em;
+}.modal-body form .tipoDecartaModal{
+  margin-left: 10.3em;
+}.modal-body form .clubModal{
+  margin-left: 3.7em;
+}.modal-body form .imgModal{
+  margin-left: 6.5em;
+} form{
+  margin-left: 5em;
+}
+#agregarCartaBtn{
+  color: #000000;
+  background-color: #3b07bf;
+  border: none;
+  transition: 200ms;
+  }#agregarCartaBtn:hover{
+    color: #fff;
+  background-color: #23007d;
+  }
+

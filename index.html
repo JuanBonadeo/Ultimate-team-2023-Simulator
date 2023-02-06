@@ -12,16 +12,192 @@
 
     </head>
     <body>
-      <div class="container">
-      <h1>Ultimate Team fifa 23</h1>
-      <h2>Hecho por Juan Bonadeo</h2>
+      
+      <nav class="navbar navbar-expand-md navcustom nav-item">
+        <div class="container-fluid">
+          <a class="navbar-brand nav-item" >Ultimate team 23</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- <span class="navbar-toggler-icon"><img src="https://cdn-icons-png.flaticon.com/512/2976/2976215.png" style="width:24px; margin-top: .2em; ">--></span> 
+          </button>
+          <div class="collapse navbar-collapse" data-bs-toggle="collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a id="mostarCatalogo"type="button" class="nav-link active">Ver Catálogo</a>
+              </li>
+              <li class="nav-item">
+              <a type="button" class="nav-link active">
+                Ordenar
+              </a>
+            </li>
+            <li class="nav-item">
+                <select id="selectOrden"  class="form-select form-select-sm nav-link active" aria-label=".form-select-sm example">
+                  <option value="1">Ascendente</option>
+                  <option value="2">Descendente</option>
+                  <option value="3">Alfa</option>
+                </select>
+              </li>
+              <li class="nav-item">
+                <a type="button" class="nav-link active" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                  Agregar Jugador
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a type="button" id="mostrarEquipoBtn" class="nav-link active">Mi Equipo</a>
+              </li>
+            </ul>
+            
+            <form class="d-flex" role="search">
+              <select id="selectOrdenBusqueda"  class="form-select form-select-sm nav-link active nav-item buscarPor" aria-label=".form-select-sm example">
+                <option selected>Buscar Por  -</option>
+                <option value="1"> Nombre</option>
+                <option value="2">Poscicion</option>
+                <option value="3">Pais</option>
+                <option value="4">Club</option>
+                <option value="5">Calidad</option>
+              </select>
+              <input class="form-control me-2 nav-item nav-input" id="buscador" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success nav-item " id="buscadorBtn">Buscar</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      
+      <main>
+      <div class="container margint">
+        
+          <h1 id="titulo"></h1>
+      <div class="container"></div>
+        <div id="coincidencia"></div>
+        <div id="cartas" class="row"></div>
       </div>
-
-
+      
+       <!-- Modal  AGREGAR JUGADOR-->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Agregar Jugador</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><img src="https://cdn-icons-png.flaticon.com/512/1828/1828747.png" style="width:24px; border-radius: .5em;background-color: #23007d; "></button>
+      </div>
+      <div class="modal-body my-3 container">
+        <form >
+          <label for="nombreApellido">Nombre y Apellido:</label> <input type="text" id="jugadorIngresado" name="nombreApellido"><label for="posicion">Poscicion:</label> 
+          <select id="posicionIngresado" name="posicion">
+            <option value=""></option>
+            <option value="DC">DC</option>
+            <option value="EI">EI</option>
+            <option value="ED">ED</option>
+            <option value="MCO">MCO</option>
+            <option value="MP">MP</option>
+            <option value="MI">MI</option>
+            <option value="MD">MD</option>
+            <option value="MCO">MCO</option>
+            <option value="MCD">MCD</option>
+            <option value="DFD">DFD</option>
+            <option value="DFI">DFI</option>
+            <option value="DFC">DFC</option>
+            <option value="CD">CD</option>
+            <option value="CI">CI</option>
+            <option value="PQ">PQ</option>
+          </select>
+          <br><br>
+          <label for="pais">Nacionalidad:</label> 
+          <select id="paisIngresado" name="pais">
+            <option value="">Paises</option>
+            <option value="argentina">Argentina</option>
+            <option value="brasil">Brasil</option>
+            <option value="colombia">Colombia</option>
+            <option value="uruguay">Uruguay</option>
+            <option value="españa">España</option>
+            <option value="alemania">Alemania</option>
+            <option value="croacia">Croacia</option>
+            <option value="belgica">Bélgica</option>
+            <option value="francia">Francia</option>
+            <option value="inglaterra">Inglaterra</option>
+            <option value="italia">Italia</option>
+            <option value="paises bajos">Países Bajos</option>
+            <option value="portugal">Portugal</option>
+            <option value="suiza">Suiza</option>
+            <option value="servia">Servia</option>
+            <option value="polonia">Polonia</option>
+            <option value="dinamarca">Dinamarca</option>
+            <option value="noruega">Noruega</option>
+            <option value="canada">Canadá</option>
+          </select>
+          
+          
+          <label for="club"class="clubModal">Club:</label>
+        <select id="clubIngresado" name="club">
+          <option value="">Clubes</option>        
+          <option value="icono">ICONO</option>
+          <option value="real madrid">Real Madrid</option>
+          <option value="barcelona">Barcelona</option>
+          <option value="manchester united">Manchester United</option>
+          <option value="bayern munich">Bayern Munich</option>
+          <option value="psg">PSG</option>
+          <option value="manchester city">Manchester City</option>
+          <option value="juventus">Juventus</option>
+          <option value="chelsea">Chelsea</option>
+          <option value="liverpool">Liverpool</option>
+          <option value="arsenal">Arsenal</option>
+          <option value="borussia">Borussia Dortmund</option>
+          <option value="milan">AC Milan</option>
+          <option value="inter">Inter Milan</option>
+          <option value="ajax">Ajax</option>
+          <option value="atletico de madrid">Atletico Madrid</option>
+          <option value="tottenham">Tottenham Hotspur</option>
+          <option value="brighton">Brighton</option>
+          <option value="tottenham">Tottenham Hotspur</option>
+          <option value="aston villa">Aston Villa</option>
+          <option value="boca">Boca Juniors</option>
+        </select>
+          <br> <br>
+          <label for="global">Global:</label> <input type="number" id="globalIngresado" name="global">
+          <label for="tipoDecarta" class="tipoDecartaModal">Ingrese calidad:</label> 
+          <select id="tipoDeCartaIngresado" name="tipoDeCarta">
+            <option value=""></option>
+            <option value="oro">ORO</option>
+            <option value="icono">ICONO</option>
+            <option value="toty">TOTY</option>
+            <option value="TOTW">TOTW</option>
+          </select>
+          <br><br>
+        <label for="img" class="imgModal">Ingrese imagen</label> <input placeholder="direccion de su img.png" type="text" id="imgIngresado" name="img">
+          <br><br>
+          <div class="modal-stats">
+          <label for="ritmo">Ritmo:</label><input type="text" id="ritmoIngresado" name="ritmo">
+          <label for="regate">Regate:</label><input type="text" id="regateIngresado" name="regate">
+          <br>
+          <label for="tiro">Tiro:</label><input type="text" id="tiroIngresado" name="tiro">                                                             
+          <label for="defensa">Defensa:</label><input type="text" id="defensaIngresado" name="defensa">
+          <br>
+          <label for="pase">Pase:</label> <input type="text" id="paseIngresado" name="pase">
+          <label for="fisico"> Fisico:</label><input type="text" id="fisicoIngresado" name="fisico"></div>
+      </form>
+      
+      
+      </div>
+      <div class="modal-footer"><button id="agregarCartaBtn" class="btn btn-success" data-bs-dismiss="modal">Agregar Jugador</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-ZxaOKBII5+5lXtr5b5h5M5a5c5zvwqugPV5zZjQ2xFgCvL9X7Vu08Ht4Cy7K70" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      <script src="./js/class.js"></script>
+      <script src="./js/script.js"></script>
+      <script src="./js/inicio.js"></script>
 
       
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-      <script src="./js/script.js"></script>
+      
     </body>
 </html>
+
+
+
