@@ -188,32 +188,28 @@ selectOrdenBusqueda.addEventListener("change", ()=>{
   if(selectOrdenBusqueda.value == 1){
     document.getElementById("buscadorBtn").addEventListener("click", function(event) {
       event.preventDefault();
-      // Your code to process the search here
       buscarJugador(buscador.value, catalogo)
     })
   }else if(selectOrdenBusqueda.value == 2){
     document.getElementById("buscadorBtn").addEventListener("click", function(event) {
       event.preventDefault();
-      // Your code to process the search here
-      buscarJugador(buscador.value, catalogo)
+      buscarPosicion(buscador.value, catalogo)
     })
   }else if(selectOrdenBusqueda.value == 3){
     document.getElementById("buscadorBtn").addEventListener("click", function(event) {
           event.preventDefault();
-          // Your code to process the search here
-          buscarJugador(buscador.value, catalogo)
+          buscarPais(buscador.value, catalogo)
         })
   }else if(selectOrdenBusqueda.value == 4){
     document.getElementById("buscadorBtn").addEventListener("click", function(event) {
             event.preventDefault();
-            // Your code to process the search here
-            buscarJugador(buscador.value, catalogo)
+            buscarClub(buscador.value, catalogo)
           })
   }else if(selectOrdenBusqueda.value == 5){
     document.getElementById("buscadorBtn").addEventListener("click", function(event) {
               event.preventDefault();
               // Your code to process the search here
-              buscarJugador(buscador.value, catalogo)
+              buscarCalidad(buscador.value, catalogo)
             })
           }})
   
