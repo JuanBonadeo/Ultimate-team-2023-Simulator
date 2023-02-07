@@ -192,19 +192,30 @@ selectOrdenBusqueda.addEventListener("change", ()=>{
       buscarJugador(buscador.value, catalogo)
     })
   }else if(selectOrdenBusqueda.value == 2){
-    buscadorBtn.addEventListener("click", ()=>
-    {buscarPosicion(buscador.value, catalogo)})
+    document.getElementById("buscadorBtn").addEventListener("click", function(event) {
+      event.preventDefault();
+      // Your code to process the search here
+      buscarJugador(buscador.value, catalogo)
+    })
   }else if(selectOrdenBusqueda.value == 3){
-  buscadorBtn.addEventListener("click", ()=>
-    {buscarPais(buscador.value, catalogo)})
+    document.getElementById("buscadorBtn").addEventListener("click", function(event) {
+          event.preventDefault();
+          // Your code to process the search here
+          buscarJugador(buscador.value, catalogo)
+        })
   }else if(selectOrdenBusqueda.value == 4){
-  buscadorBtn.addEventListener("click", ()=>
-    {buscarClub(buscador.value, catalogo)})
+    document.getElementById("buscadorBtn").addEventListener("click", function(event) {
+            event.preventDefault();
+            // Your code to process the search here
+            buscarJugador(buscador.value, catalogo)
+          })
   }else if(selectOrdenBusqueda.value == 5){
-  buscadorBtn.addEventListener("click", ()=>
-    {buscarCalidad(buscador.value, catalogo)})
-  }
-})
+    document.getElementById("buscadorBtn").addEventListener("click", function(event) {
+              event.preventDefault();
+              // Your code to process the search here
+              buscarJugador(buscador.value, catalogo)
+            })
+          }})
   
 
 

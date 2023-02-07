@@ -30,11 +30,6 @@ margin-left: .8em;
   align-items: center;
   flex-direction: column;
 }	
-#cartas{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .cartas{
 	width: 15rem; 
 	height: 23rem;
@@ -170,11 +165,7 @@ background-color: #3b07bf;
 color: #000000;
 }
 
-#cartas-container{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
+
 .card-stats {
   display: grid; 
   grid-template-columns: 1fr 1fr; 
