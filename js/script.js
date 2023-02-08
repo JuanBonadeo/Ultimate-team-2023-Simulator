@@ -30,14 +30,15 @@ function mostrarCatalogo(catalogo){
             <div class="img"><img class="img-fluid" src="${carta.id < 20 ? `images/${carta.img}` : carta.id > 20 ? `${carta.img}` : ""}" alt="${carta.nombreApellido}"></div>
             <div class="nombreApellido"><h4>${carta.nombreApellido}</h4></div>
             <div class="card-stats">
-            <div class="ritmo"><p>RIT${carta.ritmo}</p></div>
+            <div class="ritmo"><p>RIT ${carta.ritmo}</p></div>
             <div class="regate"><p>REG ${carta.regate}</p></div>
             <div class="tiro"><p>TIR ${carta.tiro}</p></div>
             <div class="pase"><p>PAS ${carta.pase}</p></div>
             <div class="fisico"><p>FIS ${carta.fisico}</p></div>
             <div class="defensa"><p>DEF ${carta.defensa}</p></div>
           </div>
-        </div>     
+        </div> 
+            
           </div><button type="button" id="comprarJugadorBtn${carta.id}"   class="btnComprarVender btn-outline-success">Comprar Jugador<img src="https://cdn-icons-png.flaticon.com/512/2420/2420157.png" style="width:24px; margin-left:9px; margin-right:0px; flex-direction: row;"></button>
 `
 cartas.appendChild(nuevaCarta) 
