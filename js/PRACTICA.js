@@ -354,6 +354,84 @@ console.log(calcularTotal(3, 8, 9, 15))
 
 
 
+//CLASE 13 LIBRERIAS:
+// sweetAlert usa mucho los estilos de boostrap 
+//<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+// prueba
+Swal.fire({
+    title: 'Error!',
+    text: 'Do you want to continue',
+    icon: 'error',
+    confirmButtonText: 'Cool'
+  })
+  Swal.fire(
+    'Good job!',
+    'You clicked the button!',
+    'success'
+  )
+   
+Swal.fire('Any fool can use a computer')
+
+// para utilizar librería
+// primer 
+Swal.fire({
+    title: "Ha agregado un producto :D",
+    text: "El libro ha sido agregado",
+    icon: "info",
+    confirmButtonText: 'Entendido',
+    confirmButtonColor: "green"
+})
+
+//segunda librería Toastify
+Toastify({
+    text: "Esto es una notificación",
+    duration: 2500
+}).showToast()
+
+Toastify({
+    text: "This is a toast",
+    duration: 3000,
+    destination: "https://github.com/apvarun/toastify-js",
+    newWindow: true,
+    close: true,
+    gravity: "bottom", // `top` or `bottom`
+    position: "center", // `left`, `center` or `right`
+    stopOnFocus: true, // Prevents dismissing of toast on hover
+    style: {
+      background: "linear-gradient(to right, #00b09b, #96c93d)",
+      color: "black",
+    },
+    onClick: function(){} // Callback after click
+  }).showToast();
+
+//tercer librería Luxon para fechas y hora
+const DateTime = luxon.DateTime
+console.log(DateTime)
+//iso
+const cumple = DateTime.fromISO("1993-07-19")
+// console.log(cumple)
+// console.log(cumple.year)
+// console.log(cumple.day)
+
+const fechaHoy = DateTime.now()
+console.log(fechaHoy)
+
+// console.log(fechaHoy.year)
+// console.log(fechaHoy.second)
+
+// //formatos para mostrar la fecha
+console.log(fechaHoy.toLocaleString(DateTime.DATE_SHORT))
+console.log(cumple.toLocaleString(DateTime.DATE_SHORT))
+console.log(cumple.toLocaleString(DateTime.DATE_MED_WITH_WEEKDAY))
+console.log(fechaHoy.toLocaleString(DateTime.DATE_FULL))
+
+//imprimir en el DOM
+let fecha = document.getElementById("fecha")
+let fechaMostrar = fechaHoy.toLocaleString(DateTime.DATE_FULL)
+fecha.innerHTML = `${fechaMostrar}`
+
+
+
 
 
 

@@ -30,6 +30,14 @@ margin-left: .8em;
   align-items: center;
   flex-direction: column;
 }	
+#cartas{
+  margin-left: 4em;
+}@media screen and (max-width: 400px) {
+#cartas{
+  flex-direction: column;
+  margin-left: 0;
+}
+}
 .cartas{
 	width: 15rem; 
 	height: 23rem;
@@ -133,13 +141,11 @@ background-image: url(../images/cartas/futurestar.webp.png);
 .fisico { grid-area: fisico; }
 .defensa { grid-area: defensa; }
 
-.boton-comprar{
-	display: grid;
-	align-items: center;
-}
+
 .btnComprarVender{
+
 margin-top: 1em;
-margin-left: 1em;
+margin-left: 3.5em;
 font-weight: 100;
 font-size: 14px;
 color: #ffffff;
@@ -222,6 +228,8 @@ nav a{
   margin: 0px 0.3em;
 }.container-fluid select option{
  background-color: #000000;
+}select option:hover{
+ background-color: #0a021f;
 } .container-fluid .buscarPor{
   width: min-content;
 }
@@ -236,8 +244,17 @@ transition: 200ms;
 }#buscadorBtn:hover{
   color: #fff;
 background-color: #23007d;
+}.btn-close-nav{
+  background-image: url("https://cdn-icons-png.flaticon.com/512/5107/5107718.png");
+  width:24px; 
+  border-radius: .5em;
+  background-color: #6f36ff;
+}.btn-close:focus{
+  box-shadow: 0 0 0 0.25rem rgba(181, 13, 253, 0.096);;
 }
+
 /* Modal agregar jugador */
+
 .modal{
   margin-top: 2em;
 }.modal-content{
@@ -278,4 +295,15 @@ background-color: #23007d;
     color: #fff;
   background-color: #23007d;
   }
+  .btn-close{
+    width:24px; 
+    border-radius: .5em;
+    background-color: #6f36ff;
+  }.btn-close:focus{
+    box-shadow: 0 0 0 0.25rem rgba(181, 13, 253, 0.096);;
+  }
 
+  /* LOADER */
+  #loader{
+    margin-top: 12em;
+  }
