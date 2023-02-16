@@ -13,7 +13,7 @@
       <!-- NAV Bar Boostrap -->
       <nav class="navbar navbar-expand-md navcustom nav-item">
         <div class="container-fluid">
-          <a class="navbar-brand nav-item" >Ultimate team 23</a>
+          <a class="navbar-brand nav-item">HOME</a>
           <button class="navbar-toggler btn-close btn-close-nav" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" aria-label="Close">
           </button>
           <div class="collapse navbar-collapse" data-bs-toggle="collapse" id="navbarSupportedContent">
@@ -24,9 +24,11 @@
             <li class="nav-item">
                 <select id="selectOrden"  class="form-select form-select-sm nav-link active" aria-label=".form-select-sm example">
                   <option selected>Ordenar</option>
-                  <option value="1" aria-label="Close">Ascendente</option>
-                  <option value="2" aria-label="Close">Descendente</option>
-                  <option value="3" aria-label="Close">Alfa</option>
+                  <option value="1" aria-label="Close">Ascendente🔝</option>
+                  <option value="2" aria-label="Close">Descendente⬇️</option>
+                  <option value="3" aria-label="Close">Alfa 🔠</option>
+                  <option value="4" aria-label="Close">Ascendente💰</option>
+                  <option value="5" aria-label="Close">Descendente💰</option>
                 </select>
               </li>
               <li class="nav-item">
@@ -36,6 +38,9 @@
               </li>
               <li class="nav-item">
                 <a type="button" id="mostrarEquipoBtn" class="nav-link active" aria-label="Close">Mi Equipo</a>
+              </li>
+              <li class="nav-item">
+                <a type="button" id="mostrarTiendaBtn" class="nav-link active" aria-label="Close">Tienda</a>
               </li>
             </ul>
             <button id="billeteraContainer"> <div class="billetera-container" ><h5 id="billetera">8500</h5> <img class="coins img-fluid"src="https://cdn-icons-png.flaticon.com/512/2530/2530538.png" alt="source"></div></button>
@@ -62,7 +67,8 @@
           
           <h1 id="titulo"></h1>
         <div id="coincidencia"></div>
-        <div id="cartas" class="row"></div>
+        <div id="cartas" class="row">
+        </div>
       </div>
     <!---------------------------------------->
       <!-- Loadader-->
@@ -72,6 +78,9 @@
         <span class="visually-hidden"></span>
       </div>
     </div>
+    <div id="animation-element">
+  <img src="https://images.ctfassets.net/b4k16c7lw5ut/blog-Transitions-2.gif/7147e8a34ea8b2b47956f81d2feabfba/Transitions-2.gif" alt="Loading..." />
+</div>
     <!---------------------------------------->
        <!-- Modal  AGREGAR JUGADOR-->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">

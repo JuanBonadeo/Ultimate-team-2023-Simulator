@@ -11,6 +11,10 @@ let loader = document.getElementById("loader")
 let billetera = document.getElementById("billetera");
 let valorBilletera = parseInt(billetera.textContent);
 let billeteraContainer = document.getElementById("billeteraContainer")
+let mostrarTiendaBtn = document.getElementById("mostrarTiendaBtn")
+
+
+
 
 //                                           FUNCIONES DEL PROYECTO
 //                        BILLETERA
@@ -20,7 +24,7 @@ setTimeout(()=>{
   loader.remove()
   titulo.innerHTML = "Este es el catalogo"
 mostrarCatalogo(catalogo, "comprar")  
-}, 2000)
+}, 20)
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //                       MOSTAR CATALOGO
 function mostrarCatalogo(catalogo, botonLabel){
@@ -129,6 +133,7 @@ function buscarCatalogo(buscado, catalogo, campo){
   }else{
       coincidencia.innerHTML = ""
       mostrarCatalogo(busquedaArray, "comprar")
+      titulo.innerHTML= "Este el catalogo"
   }
 }
 selectOrdenBusqueda.addEventListener("change", ()=>{
@@ -172,9 +177,16 @@ function ordenarCatalogo(catalogo, orden) {
     case 3: // ordenar alfabeticamente catalogo
       sortedCatalogo.sort((a, b) => a.nombreApellido.localeCompare(b.nombreApellido));
       break;
+    case 4: // ordenar de mayor a menor catalogo  x precio
+      sortedCatalogo.sort((a, b) => b.precio - a.precio);
+      break;
+      case 5: // ordenar de menor a mayor catalogo  x precio
+      sortedCatalogo.sort((a, b) => a.precio - b.precio);
+      break;
     default:
       break;
   }
+  titulo.innerHTML= "Este el catalogo"
   mostrarCatalogo(sortedCatalogo, "comprar");
 }
 
@@ -183,7 +195,7 @@ selectOrden.addEventListener("change", () => {
   ordenarCatalogo(catalogo, parseInt(selectOrden.value));
 });
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-//                              MI EQUIPO
+//                                          MI EQUIPO
 let jugadorComprados = JSON.parse(localStorage.getItem("miEquipo")) || []
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //                        COMPRAR JUGADOR
@@ -246,10 +258,77 @@ mostrarCatalogo(miEquipo, "vender")
 }) 
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //                       JUNTAR MONEDAS
-billeteraContainer.addEventListener("dbClick", ()=>{
-valorBilletera++
-billetera.textContent = valorBilletera.toString();
-localStorage.setItem("valorBilletera", valorBilletera.toString());
+// billeteraContainer.addEventListener("dbClick", ()=>{
+// valorBilletera++
+// billetera.textContent = valorBilletera.toString();
+// localStorage.setItem("valorBilletera", valorBilletera.toString());
+// })
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//                               TIENDA
+mostrarTiendaBtn.addEventListener("click", ()=>{
+  cartas.innerHTML= ""
+  titulo.innerHTML= "Esta es la Tienda"
+  cartas.innerHTML= `
+  <div class="packContainer container">
+<div class="card">
+  <h2>PACK DE ORO</h2>
+  <img src="https://fut-watch.com/img/20/packs/25.png" alt="Pack 1">
+  <p>Description of Pack 1.</p>
+  <button id="packOro"class="btnComprarVender">comprar  10000<img class="coins img-fluid" src="https://cdn-icons-png.flaticon.com/512/2530/2530538.png" alt="source"><img src="https://cdn-icons-png.flaticon.com/512/2420/2420157.png" style="width:24px; margin-left:9px; margin-right:0px; flex-direction: row;"></button>
+</div>
+<div class="card">  
+  <h2>Pack TOTW</h2>
+  <img src="https://www.fifplay.com/img/fifa/22/packs/ultimate-pack.png" alt="Pack 2">
+  <p>Description of Pack 2.</p>
+  <button id="packTotw" class="btnComprarVender">comprar  15000<img class="coins img-fluid" src="https://cdn-icons-png.flaticon.com/512/2530/2530538.png" alt="source"><img src="https://cdn-icons-png.flaticon.com/512/2420/2420157.png" style="width:24px; margin-left:9px; margin-right:0px; flex-direction: row;"></button>
+</div>
+<div class="card">
+  <h2>Pack ICONO</h2>
+  <img src="https://www.fifplay.com/img/fifa/22/packs/icon-pack.png" alt="Pack 3">
+  <p>Description of Pack 3.</p>
+  <button id="packIcono" class="btnComprarVender">comprar  30000<img class="coins img-fluid" src="https://cdn-icons-png.flaticon.com/512/2530/2530538.png" alt="source"><img src="https://cdn-icons-png.flaticon.com/512/2420/2420157.png" style="width:24px; margin-left:9px; margin-right:0px; flex-direction: row;"></button>
+</div>
+</div>
+  `//        PACK DE ORO 
+  let packOro = document.getElementById("packOro");
+packOro.addEventListener("click", () => {
+  comprarPack(5000, "oro");
+})//        PACK TOTW 
+  let packTotw = document.getElementById("packTotw");
+packTotw.addEventListener("click", () => {
+  comprarPack(1000, "totw");
+})//        PACK DE ICONO 
+  let packIcono = document.getElementById("packIcono");
+packIcono.addEventListener("click", () => {
+  comprarPack(2000, "icono");
 })
+})
+  //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  //                                            PACKS OPENING
+function comprarPack(precio, calidad) {
+  if (valorBilletera >= precio) {
+    valorBilletera -= precio;
+    billetera.textContent = valorBilletera.toString();
+    cartas.innerHTML=""
+    titulo.innerHTML=""
+    document.getElementById("animation-element").style.display = "flex";
+    setTimeout(() => {
+      const jugadoresFiltrados = catalogo.filter(carta => carta.tipoDeCarta === calidad);
+      const carta1 = jugadoresFiltrados[Math.floor(Math.random() * jugadoresFiltrados.length)];
+      const carta2 = jugadoresFiltrados[Math.floor(Math.random() * jugadoresFiltrados.length)];
+      const carta3 = jugadoresFiltrados[Math.floor(Math.random() * jugadoresFiltrados.length)];
+      const nuevasCartas = [carta1, carta2, carta3];
+      miEquipo.push(carta1, carta2, carta3);
+
+      localStorage.setItem("miEquipo", JSON.stringify(miEquipo));
+      localStorage.setItem("valorBilletera", valorBilletera.toString());
+      titulo.innerHTML="Nuevos Jugadores"
+      document.getElementById("animation-element").style.display = "none";
+      mostrarCatalogo(nuevasCartas, "vender");
+
+    }, 2000);
+  }
+}
+
 
 
