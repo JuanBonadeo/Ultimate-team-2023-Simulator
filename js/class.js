@@ -46,9 +46,9 @@ const cargarCatalogo = async () => {
 };
 
 if (localStorage.getItem("catalogo")) {
-  for(let carta of JSON.parse(localStorage.getItem("catalog"))){
+  for(let carta of JSON.parse(localStorage.getItem("catalogo"))){
     let cartaNueva = new Carta(carta.id, carta.nombreApellido, carta.img, carta.pais, carta.club, carta.global, carta.posicion, carta.tipoDeCarta, carta.ritmo, carta.tiro, carta.pase, carta.regate, carta.defensa, carta.fisico, carta.precio)
-    estanteria.push(cartaNueva)
+    catalogo.push(cartaNueva)
 }
 console.log(catalogo)
 } else {
