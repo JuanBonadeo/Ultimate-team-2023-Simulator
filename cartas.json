@@ -13,7 +13,8 @@
     "pase": 97,
     "regate": 95,
     "defensa": 45,
-    "fisico": 85
+    "fisico": 85,
+    "precio": 1500000
   },
   {
     "id": 2,
@@ -29,7 +30,8 @@
     "pase": 86,
     "regate": 90,
     "defensa": 51,
-    "fisico": 83
+    "fisico": 83,
+    "precio": 400000
   },
   {
     "id": 3,
@@ -45,15 +47,16 @@
     "pase": 88,
     "regate": 94,
     "defensa": 45,
-    "fisico": 75
+    "fisico": 75,
+    "precio": 355000
   },
   {
     "id": 4,
-    "nombreApellido": "Killian Mbappe",
+    "nombreApellido": "Mbappe",
     "img": "../images/mbappe.png",
     "pais": "francia",
     "club": "psg",
-    "global": 89,
+    "global": 91,
     "posicion": "DC",
     "tipoDeCarta": "oro",
     "ritmo": 90,
@@ -61,7 +64,8 @@
     "pase": 95,
     "regate": 89,
     "defensa": 45,
-    "fisico": 78
+    "fisico": 78,
+    "precio": 425000
   },
   {
     "id": 5,
@@ -77,7 +81,8 @@
     "pase": 95,
     "regate": 87,
     "defensa": 62,
-    "fisico": 81
+    "fisico": 81,
+    "precio": 524000
   },
   {
     "id": 6,
@@ -93,7 +98,8 @@
     "pase": 81,
     "regate": 80,
     "defensa": 45,
-    "fisico": 85
+    "fisico": 85,
+    "precio": 467000
   },
   {
     "id": 7,
@@ -109,7 +115,8 @@
     "pase": 79,
     "regate": 88,
     "defensa": 45,
-    "fisico": 73
+    "fisico": 73,
+    "precio": 79000
   },
   {
     "id": 8,
@@ -125,7 +132,8 @@
     "pase": 81,
     "regate": 80,
     "defensa": 45,
-    "fisico": 85
+    "fisico": 85,
+    "precio": 100000
   },
   {
     "id": 9,
@@ -141,7 +149,8 @@
     "pase": 90,
     "regate": 80,
     "defensa": 70,
-    "fisico": 70
+    "fisico": 70,
+    "precio": 160000
   },
   {
     "id": 10,
@@ -157,7 +166,8 @@
     "pase": 83,
     "regate": 81,
     "defensa": 45,
-    "fisico": 75
+    "fisico": 75,
+    "precio": 120000
   },
   {
     "id": 11,
@@ -173,7 +183,8 @@
     "pase": 88,
     "regate": 45,
     "defensa": 79,
-    "fisico": 84
+    "fisico": 84,
+    "precio": 50000
   },
   {
     "id": 12,
@@ -189,7 +200,8 @@
     "pase": 75,
     "regate": 75,
     "defensa": 45,
-    "fisico": 85
+    "fisico": 85,
+    "precio": 300000
   },
   {
     "id": 13,
@@ -205,7 +217,8 @@
     "pase": 80,
     "regate": 80,
     "defensa": 45,
-    "fisico": 75
+    "fisico": 75,
+    "precio": 100000
   },
   {
     "id": 14,
@@ -221,7 +234,8 @@
     "pase": 82,
     "regate": 82,
     "defensa": 45,
-    "fisico": 85
+    "fisico": 85,
+    "precio": 250000
   },
   {
     "id": 15,
@@ -237,7 +251,8 @@
     "pase": 81,
     "regate": 65,
     "defensa": 86,
-    "fisico": 85
+    "fisico": 85,
+    "precio": 70000
   },
   {
     "id": 16,
@@ -253,7 +268,8 @@
     "pase": 81,
     "regate": 74,
     "defensa": 80,
-    "fisico": 75
+    "fisico": 75,
+    "precio": 135000
   },
   {
     "id": 17,
@@ -269,7 +285,8 @@
     "pase": 75,
     "regate": 82,
     "defensa": 45,
-    "fisico": 68
+    "fisico": 68,
+    "precio": 95000
   },
   {
     "id": 18,
@@ -285,7 +302,8 @@
     "pase": 90,
     "regate": 82,
     "defensa": 75,
-    "fisico": 69
+    "fisico": 69,
+    "precio": 145000
   },
   {
     "id": 19,
@@ -301,7 +319,8 @@
     "pase": 83,
     "regate": 85,
     "defensa": 45,
-    "fisico": 80
+    "fisico": 80,
+    "precio": 450000
   },
   {
     "id": 20,
@@ -317,10 +336,11 @@
     "pase": 86,
     "regate": 87,
     "defensa": 45,
-    "fisico": 78
+    "fisico": 78,
+    "precio": 340000
   },
   {
-    "id": 0,
+    "id": 22,
     "nombreApellido": "Enzo Fernandez",
     "img": "../images/fernandez.png",
     "pais": "argentina",
@@ -333,10 +353,11 @@
     "pase": 90,
     "regate": 84,
     "defensa": 80,
-    "fisico": 78
+    "fisico": 78,
+    "precio": 157000
   },
   {
-    "id": 21,
+    "id": 23,
     "nombreApellido": "Kevin De Bruyne",
     "img": "../images/debruyne.png",
     "pais": "belgica",
@@ -349,27 +370,29 @@
     "pase": 97,
     "regate": 91,
     "defensa": 64,
-    "fisico": 78
-},
-{
-    "id": 22,
-    "nombreApellido": "Robert Lewandowski",
-    "img": "../images/lewandowski.png",
-    "pais": "polonia",
-    "club": "bayern munich",
-    "global": 93,
-    "posicion": "DC",
-    "tipoDeCarta": "toty",
-    "ritmo": 78,
-    "tiro": 97,
-    "pase": 82,
-    "regate": 87,
-    "defensa": 44,
-    "fisico": 85
+    "fisico": 78,
+    "precio": 600000
 },
 {
     "id": 23,
-    "nombreApellido": "Mohamed Salah",
+    "nombreApellido": "Lewandowski",
+    "img": "../images/lewandowski.png",
+    "pais": "polonia",
+    "club": "bayern munich",
+    "global": 89,
+    "posicion": "DC",
+    "tipoDeCarta": "oro",
+    "ritmo": 78,
+    "tiro": 91,
+    "pase": 82,
+    "regate": 87,
+    "defensa": 44,
+    "fisico": 80,
+    "precio": 220000
+},
+{
+    "id": 24,
+    "nombreApellido": "Salah",
     "img": "../images/salah.png",
     "pais": "egipto",
     "club": "liverpool",
@@ -381,13 +404,14 @@
     "pase": 80,
     "regate": 89,
     "defensa": 45,
-    "fisico": 75
+    "fisico": 75,
+    "precio": 260000
 },
 {
-    "id": 24,
+    "id": 25,
     "nombreApellido": "Virgil van Dijk",
     "img": "../images/vandijk.png",
-    "pais": "holanda",
+    "pais": "paises bajos",
     "club": "liverpool",
     "global": 90,
     "posicion": "DFC",
@@ -397,38 +421,42 @@
     "pase": 82,
     "regate": 72,
     "defensa": 93,
-    "fisico": 92
-},
-{
-    "id": 25,
-    "nombreApellido": "Kylian Hazard",
-    "img": "../images/hazard.png",
-    "pais": "belgica",
-    "club": "borussia dortmund",
-    "global": 86,
-    "posicion": "EI",
-    "tipoDeCarta": "oro",
-    "ritmo": 89,
-    "tiro": 76,
-    "pase": 79,
-    "regate": 85,
-    "defensa": 51,
-    "fisico": 71
+    "fisico": 92,
+    "precio": 312000
 },
 {
     "id": 26,
+    "nombreApellido": "Maradona",
+    "img": "../images/maradona.png",
+    "pais": "argentina",
+    "club": "icono",
+    "global": 98,
+    "posicion": "MCO",
+    "tipoDeCarta": "icono",
+    "ritmo": 94,
+    "tiro": 98,
+    "pase": 96,
+    "regate": 97,
+    "defensa": 51,
+    "fisico": 80,
+    "precio": 1200000
+},
+{
+    "id": 27,
     "nombreApellido": "Sadio Mane",
     "img": "../images/mane.png",
     "pais": "senegal",
     "club": "liverpool",
     "global": 90,
     "posicion": "EI",
-    "tipoDeCarta": "toty",
+    "tipoDeCarta": "totw",
     "ritmo": 95,
     "tiro": 85,
     "pase": 84,
     "regate": 92,
     "defensa": 46,
-    "fisico": 78
+    "fisico": 78,
+    "precio": 295000
 }
 ]
+

@@ -143,7 +143,7 @@ background-image: url(../images/cartas/futurestar.webp.png);
 
 
 .btnComprarVender{
-width: max-content;
+
 margin-top: 1em;
 margin-left: 1em;
 font-weight: 100;
@@ -273,6 +273,8 @@ background-color: #23007d;
   width: 7em;
 }.modal-body form #imgIngresado{
   width: 12em;
+}.modal-body form .precioModal{
+  width: 12em;
 }.modal-body form .modal-stats{
   margin-left: 8em;
 }.modal-body form label{
@@ -281,8 +283,6 @@ background-color: #23007d;
   margin-left: 10.3em;
 }.modal-body form .clubModal{
   margin-left: 3.7em;
-}.modal-body form .imgModal{
-  margin-left: 6.5em;
 } form{
   margin-left: 5em;
 }

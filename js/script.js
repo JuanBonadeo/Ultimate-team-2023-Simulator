@@ -53,7 +53,7 @@ function mostrarCatalogo(catalogo, botonLabel){
 `
 cartas.appendChild(nuevaCarta) 
 const btnComprarVender = document.createElement("button");
-btnComprarVender.textContent = botonLabel;
+btnComprarVender.textContent = botonLabel.toLocaleString();
 btnComprarVender.innerHTML+= `  ${carta.precio}<img class="coins img-fluid"src="https://cdn-icons-png.flaticon.com/512/2530/2530538.png" alt="source"><img src="https://cdn-icons-png.flaticon.com/512/2420/2420157.png" style="width:24px; margin-left:9px; margin-right:0px; flex-direction: row;">`
 btnComprarVender.classList.add("btnComprarVender", "btnComprarVender");
 btnComprarVender.addEventListener("click", () => {
@@ -86,7 +86,7 @@ function agregarCarta(catalogo) {
   let defensaIngresado = document.getElementById("defensaIngresado")
   let fisicoIngresado = document.getElementById("fisicoIngresado")
 
-  const cartaNueva = new carta(
+  const cartaNueva = new Carta(
     catalogo.length + 1,
     jugadorIngresado.value,
     imgIngresado.value,
@@ -100,7 +100,8 @@ function agregarCarta(catalogo) {
     paseIngresado.value,
     regateIngresado.value,
     fisicoIngresado.value,
-    defensaIngresado.value
+    defensaIngresado.value,
+    precioIngresado.value
   );
   console.log(cartaNueva);
   catalogo.push(cartaNueva)
@@ -254,6 +255,7 @@ function venderDeEquipo(carta, precio){
 //                        MOSTRAR MI EQUIPO
 mostrarEquipoBtn.addEventListener("click", ()=>{
 titulo.innerHTML= "Este es tu Equipo"
+cartas.innerHTML= ""
 mostrarCatalogo(miEquipo, "vender")
 }) 
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -274,13 +276,13 @@ mostrarTiendaBtn.addEventListener("click", ()=>{
   <h2>PACK DE ORO</h2>
   <img src="https://fut-watch.com/img/20/packs/25.png" alt="Pack 1">
   <p>Description of Pack 1.</p>
-  <button id="packOro"class="btnComprarVender">comprar  10000<img class="coins img-fluid" src="https://cdn-icons-png.flaticon.com/512/2530/2530538.png" alt="source"><img src="https://cdn-icons-png.flaticon.com/512/2420/2420157.png" style="width:24px; margin-left:9px; margin-right:0px; flex-direction: row;"></button>
+  <button id="packOro"class="btnComprarVender">comprar  100000<img class="coins img-fluid" src="https://cdn-icons-png.flaticon.com/512/2530/2530538.png" alt="source"><img src="https://cdn-icons-png.flaticon.com/512/2420/2420157.png" style="width:24px; margin-left:9px; margin-right:0px; flex-direction: row;"></button>
 </div>
 <div class="card">  
   <h2>Pack TOTW</h2>
   <img src="https://www.fifplay.com/img/fifa/22/packs/ultimate-pack.png" alt="Pack 2">
   <p>Description of Pack 2.</p>
-  <button id="packTotw" class="btnComprarVender">comprar  15000<img class="coins img-fluid" src="https://cdn-icons-png.flaticon.com/512/2530/2530538.png" alt="source"><img src="https://cdn-icons-png.flaticon.com/512/2420/2420157.png" style="width:24px; margin-left:9px; margin-right:0px; flex-direction: row;"></button>
+  <button id="packTotw" class="btnComprarVender">comprar  500000<img class="coins img-fluid" src="https://cdn-icons-png.flaticon.com/512/2530/2530538.png" alt="source"><img src="https://cdn-icons-png.flaticon.com/512/2420/2420157.png" style="width:24px; margin-left:9px; margin-right:0px; flex-direction: row;"></button>
 </div>
 <div class="card">
   <h2>Pack ICONO</h2>
@@ -292,15 +294,15 @@ mostrarTiendaBtn.addEventListener("click", ()=>{
   `//        PACK DE ORO 
   let packOro = document.getElementById("packOro");
 packOro.addEventListener("click", () => {
-  comprarPack(10000, "oro");
+  comprarPack(100000, "oro");
 })//        PACK TOTW 
   let packTotw = document.getElementById("packTotw");
 packTotw.addEventListener("click", () => {
-  comprarPack(15000, "totw");
+  comprarPack(500000, "totw");
 })//        PACK DE ICONO 
   let packIcono = document.getElementById("packIcono");
 packIcono.addEventListener("click", () => {
-  comprarPack(30900, "icono");
+  comprarPack(1000000, "icono");
 })
 })
   //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -322,11 +324,12 @@ function comprarPack(precio, calidad) {
 
       localStorage.setItem("miEquipo", JSON.stringify(miEquipo));
       localStorage.setItem("valorBilletera", valorBilletera.toString());
-      titulo.innerHTML="Nuevos Jugadores"
-      document.getElementById("animation-element").style.display = "none";
-      mostrarCatalogo(nuevasCartas, "vender");
-
-    }, 2000);
+      
+      document.getElementById("animation-element").style.display = "none";  
+    mostrarCatalogo(nuevasCartas, "vender")
+    titulo.innerHTML="Nuevos Jugadores"
+    }, 4200);
+    
   }else {
     Swal.fire({
       title: 'No tienes suficiente saldo',
