@@ -143,9 +143,9 @@ background-image: url(../images/cartas/futurestar.webp.png);
 
 
 .btnComprarVender{
-
+width: max-content;
 margin-top: 1em;
-margin-left: 3.5em;
+margin-left: 1em;
 font-weight: 100;
 font-size: 14px;
 color: #ffffff;

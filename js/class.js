@@ -448,7 +448,7 @@ if (localStorage.getItem("valorBilletera")) {
   billetera.textContent = valorBilletera.toString();
 } else {
   // Entra por primera vez
-  valorBilletera = 8500; // Valor predeterminado
+  valorBilletera = 80500; // Valor predeterminado
   localStorage.setItem("valorBilletera", JSON.stringify(valorBilletera));
 }
 

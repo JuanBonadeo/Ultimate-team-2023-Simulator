@@ -24,7 +24,7 @@ setTimeout(()=>{
   loader.remove()
   titulo.innerHTML = "Este es el catalogo"
 mostrarCatalogo(catalogo, "comprar")  
-}, 20)
+}, 3000)
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //                       MOSTAR CATALOGO
 function mostrarCatalogo(catalogo, botonLabel){
@@ -58,7 +58,7 @@ btnComprarVender.innerHTML+= `  ${carta.precio}<img class="coins img-fluid"src="
 btnComprarVender.classList.add("btnComprarVender", "btnComprarVender");
 btnComprarVender.addEventListener("click", () => {
   if (botonLabel === "comprar") {
-    agregarAEquipo(carta, `${carta.precio}`)
+    agregarAEquipo(carta,`${carta.precio}`)
   } else{
     venderDeEquipo(carta,`${carta.precio}`)
  }});
@@ -292,15 +292,15 @@ mostrarTiendaBtn.addEventListener("click", ()=>{
   `//        PACK DE ORO 
   let packOro = document.getElementById("packOro");
 packOro.addEventListener("click", () => {
-  comprarPack(5000, "oro");
+  comprarPack(10000, "oro");
 })//        PACK TOTW 
   let packTotw = document.getElementById("packTotw");
 packTotw.addEventListener("click", () => {
-  comprarPack(1000, "totw");
+  comprarPack(15000, "totw");
 })//        PACK DE ICONO 
   let packIcono = document.getElementById("packIcono");
 packIcono.addEventListener("click", () => {
-  comprarPack(2000, "icono");
+  comprarPack(30900, "icono");
 })
 })
   //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -327,6 +327,15 @@ function comprarPack(precio, calidad) {
       mostrarCatalogo(nuevasCartas, "vender");
 
     }, 2000);
+  }else {
+    Swal.fire({
+      title: 'No tienes suficiente saldo',
+      text: `Te faltan ${precio - valorBilletera}`,
+      icon: 'error',
+      background: 'black',
+      confirmButtonText: 'OK',
+      timer: 4100
+    })
   }
 }
 
