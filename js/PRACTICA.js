@@ -429,6 +429,54 @@ console.log(fechaHoy.toLocaleString(DateTime.DATE_FULL))
 let fecha = document.getElementById("fecha")
 let fechaMostrar = fechaHoy.toLocaleString(DateTime.DATE_FULL)
 fecha.innerHTML = `${fechaMostrar}`
+// PROMESAS 
+// const eventoFuturo =(valor)=>{
+//   return new Promise((resolve, reject)=>{
+//     if(valor == true){
+//       resolve("La promesa se ha cumplido")
+//     }else{
+//       reject("la promesa NO se ha cumplido")
+//     }
+
+//   })
+// }
+// console.log(eventoFuturo(false))
+// console.log(eventoFuturo(true))
+
+// eventoFuturo(true)
+// .then((respuesta)=>{
+//   console.log(respuesta)
+// })
+// .finally(()=>{
+//   console.log("fin de la promesa")
+// })
+// class tutor{
+//   constructor(nombre, apellido){
+//     this.nombre = nombre,
+//     this.apellido = apellido
+//   }
+// }
+// const tutro1 =("Jorge","Mendez")
+// const tutro2 =("Walter","Renesa")
+// let tutores = [tutro1, tutro2]
+
+// function llamarTutores(resultado){
+//   return new Promise ((resolve, rejected)=>{
+//     if(resultado){
+//       resolve(tutores)
+//     }else{
+//       rejected("no se pudo cargar a los tutores")
+//     }
+//   })
+// }
+// llamarTutores(true)
+// .then(()=>{console.log(respuesta)})
+// .catch(
+//   respuesta => console.log(respuesta)
+// )
+// .finally(()=>{
+//   console.log(" ya se termino el llamado")
+// })
 
 
 

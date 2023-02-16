@@ -13,8 +13,7 @@ class carta {
       pase,
       regate,
       defensa,
-      fisico,
-      precio
+      fisico
     ) {
       //propiedades o atributos de nuestra clase
       (this.id = id),
@@ -31,8 +30,6 @@ class carta {
         (this.regate = regate),
         (this.defensa = defensa),
         (this.fisico = fisico);
-        (this.precio = precio);
-
     }
   }
   
@@ -52,8 +49,7 @@ class carta {
     97,
     95,
     45,
-    85,
-    21500
+    85
   );
   const carta2 = new carta(
     2,
@@ -69,8 +65,7 @@ class carta {
     86,
     90,
     51,
-    83,
-    10200
+    83
   );
   const carta3 = new carta(
     3,
@@ -86,8 +81,7 @@ class carta {
     88,
     94,
     45,
-    75,
-    7500
+    75
   );
   const carta4 = new carta(
     4,
@@ -103,8 +97,7 @@ class carta {
     95,
     89,
     45,
-    78, 
-    7000
+    78
   );
   const carta5 = new carta(
     5,
@@ -120,8 +113,7 @@ class carta {
     95,
     87,
     62,
-    81,
-    15000
+    81
   );
   const carta6 = new carta(
     6,
@@ -137,8 +129,7 @@ class carta {
     81,
     80,
     45,
-    85,
-    10450
+    85
   );
   const carta7 = new carta(
     7,
@@ -154,8 +145,7 @@ class carta {
     79,
     88,
     45,
-    73,
-    2000
+    73
   );
   const carta8 = new carta(
     8,
@@ -171,8 +161,7 @@ class carta {
     81,
     80,
     45,
-    85,
-    4600
+    85
   );
   const carta9 = new carta(
     9,
@@ -188,8 +177,7 @@ class carta {
     90,
     80,
     70,
-    70,
-    4500
+    70
   );
   const carta10 = new carta(
     10,
@@ -205,8 +193,7 @@ class carta {
     83,
     81,
     45,
-    75,
-    4300
+    75
   );
   const carta11 = new carta(
     11,
@@ -222,8 +209,7 @@ class carta {
     87,
     88,
     45,
-    79,
-    1350
+    79
   );
   const carta12 = new carta(
     12,
@@ -239,8 +225,7 @@ class carta {
     75,
     75,
     45,
-    85,
-    7650
+    85
   );
   const carta13 = new carta(
     13,
@@ -256,8 +241,7 @@ class carta {
     86,
     80,
     45,
-    75,
-    4900
+    75
   );
   const carta14 = new carta(
     14,
@@ -273,8 +257,7 @@ class carta {
     80,
     82,
     45,
-    85,
-    8600
+    85
   );
   const carta15 = new carta(
     15,
@@ -290,8 +273,7 @@ class carta {
     81,
     65,
     86,
-    85,
-    2300
+    85
   );
   const carta16 = new carta(
     16,
@@ -307,8 +289,7 @@ class carta {
     81,
     74,
     80,
-    75,
-    2500
+    75
   );
   const carta17 = new carta(
     17,
@@ -324,8 +305,7 @@ class carta {
     75,
     82,
     45,
-    68,
-    3000
+    68
   );
   const carta18 = new carta(
     18,
@@ -341,8 +321,7 @@ class carta {
     90,
     82,
     75,
-    69,
-    4000
+    69
   );
   const carta19 = new carta(
     19,
@@ -358,8 +337,7 @@ class carta {
     83,
     85,
     45,
-    80,
-    13000
+    80
   );
   const carta20 = new carta(
     19,
@@ -375,8 +353,7 @@ class carta {
     86,
     87,
     45,
-    78,
-    8000
+    78
   );
     const carta0 = new carta(
     19,
@@ -392,8 +369,7 @@ class carta {
     90,
     84,
     76,
-    76,
-    3600
+    76
   );
   
 
@@ -441,16 +417,3 @@ if(localStorage.getItem("miEquipo")){
     miEquipo.push()
     localStorage.setItem("miEquipo", JSON.stringify(miEquipo))
 }
-
-if (localStorage.getItem("valorBilletera")) {
-  
-  valorBilletera = JSON.parse(localStorage.getItem("valorBilletera"));
-  billetera.textContent = valorBilletera.toString();
-} else {
-  // Entra por primera vez
-  valorBilletera = 8500; // Valor predeterminado
-  localStorage.setItem("valorBilletera", JSON.stringify(valorBilletera));
-}
-
-
-

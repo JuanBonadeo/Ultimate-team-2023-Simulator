@@ -307,3 +307,15 @@ background-color: #23007d;
   #loader{
     margin-top: 12em;
   }
+  /* COINS */
+  .coins{
+    height: 1em;
+    width: auto;
+  }.billetera-container{
+    display: flex;
+    background-color: #d6d6d6be;
+    height: 1.3em;
+    align-items: center;
+  }.billetera-container h5{
+    padding-top: .3em;
+  }

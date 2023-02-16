@@ -1,6 +1,4 @@
-
-
-//capturas de nodos DOM
+//CAPTURAS DE DOM
 let cartas = document.getElementById("cartas")
 let titulo = document.getElementById("titulo")
 let mostrarCatalogoBtn = document.getElementById("mostarCatalogo")
@@ -10,19 +8,20 @@ let selectOrden = document.getElementById("selectOrden")
 let selectOrdenBusqueda = document.getElementById("selectOrdenBusqueda")
 let mostrarEquipoBtn = document.getElementById("mostrarEquipoBtn")
 let loader = document.getElementById("loader")
+let billetera = document.getElementById("billetera");
+let valorBilletera = parseInt(billetera.textContent);
+let billeteraContainer = document.getElementById("billeteraContainer")
 
-// mostrar loader
+//                                           FUNCIONES DEL PROYECTO
+//                        BILLETERA
+
+//                        MOSTRAR LOADER
 setTimeout(()=>{
   loader.remove()
   titulo.innerHTML = "Este es el catalogo"
 mostrarCatalogo(catalogo, "comprar")  
-}, 2500)
-
-
-
-//                          FUNCIONES DEL PROYECTO
-
-
+}, 2000)
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //                       MOSTAR CATALOGO
 function mostrarCatalogo(catalogo, botonLabel){
     cartas.innerHTML= ""
@@ -49,50 +48,25 @@ function mostrarCatalogo(catalogo, botonLabel){
         </div> 
 `
 cartas.appendChild(nuevaCarta) 
-
 const btnComprarVender = document.createElement("button");
 btnComprarVender.textContent = botonLabel;
-btnComprarVender.innerHTML+= `<img src="https://cdn-icons-png.flaticon.com/512/2420/2420157.png" style="width:24px; margin-left:9px; margin-right:0px; flex-direction: row;">`
+btnComprarVender.innerHTML+= `  ${carta.precio}<img class="coins img-fluid"src="https://cdn-icons-png.flaticon.com/512/2530/2530538.png" alt="source"><img src="https://cdn-icons-png.flaticon.com/512/2420/2420157.png" style="width:24px; margin-left:9px; margin-right:0px; flex-direction: row;">`
 btnComprarVender.classList.add("btnComprarVender", "btnComprarVender");
 btnComprarVender.addEventListener("click", () => {
   if (botonLabel === "comprar") {
-    agregarAEquipo(carta)
-    Swal.fire({
-      title: 'Jugador Comprado',
-      text: `${carta.nombreApellido} ha sido comprado`,
-      image: `${carta.img}`,
-      imageHeight: 200,
-      icon: 'success',
-      background: 'black',
-      confirmButtonText: 'OK',
-      timer: 4100
-    });
-    
+    agregarAEquipo(carta, `${carta.precio}`)
   } else{
-    venderDeEquipo(carta)
-  Swal.fire({
-      title: 'Jugador vendido',
-      text: `${carta.nombreApellido} ha sido vendido`,
-      icon: 'success',
-      background: 'black',
-      confirmButtonText: 'OK',
-      timer: 4100
-    })}});
+    venderDeEquipo(carta,`${carta.precio}`)
+ }});
   nuevaCarta.appendChild(btnComprarVender);
   cartas.appendChild(nuevaCarta);
 }}
-
-
-
-mostrarCatalogoBtn.addEventListener("click", ()=>{
-    
+mostrarCatalogoBtn.addEventListener("click", ()=>{  
    titulo.innerHTML = "Este es el catalogo"
   mostrarCatalogo(catalogo, "comprar")
-  
-  
 }) 
-
-//                      AGREGAR CARTA
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//                        AGREGAR CARTA
 function agregarCarta(catalogo) {
   let jugadorIngresado = document.getElementById("jugadorIngresado")
   let imgIngresado = document.getElementById("imgIngresado");
@@ -108,8 +82,6 @@ function agregarCarta(catalogo) {
   let defensaIngresado = document.getElementById("defensaIngresado")
   let fisicoIngresado = document.getElementById("fisicoIngresado")
 
-  //creamos nuevo objeto
-  //para id dinámica usamos propiedad length
   const cartaNueva = new carta(
     catalogo.length + 1,
     jugadorIngresado.value,
@@ -128,7 +100,7 @@ function agregarCarta(catalogo) {
   );
   console.log(cartaNueva);
   catalogo.push(cartaNueva)
-  //creamos nuevo objeto 
+  
   Swal.fire({
     title: 'Jugador agregado',
     text: `${jugadorIngresado.value} ha sido correctamente al catalogo`,
@@ -137,18 +109,16 @@ function agregarCarta(catalogo) {
     confirmButtonText: 'OK',
     timer: 4100,
   })
-  //guardar en localStorage
   localStorage.setItem("catalogo", JSON.stringify(catalogo))
   //resetear los input 
   agregarCartaModal.reset()
 }
- 
 agregarCartaBtn.addEventListener("click", ()=>{
   agregarCarta(catalogo)
   mostrarCatalogo(catalogo, "comprar")
 })
-
-// //             BUSQUEDAD
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//                        BUSQUEDAD
 function buscarCatalogo(buscado, catalogo, campo){
   let busquedaArray = catalogo.filter(
       (carta) => carta[campo].toLowerCase().includes(buscado.toLowerCase())
@@ -188,11 +158,8 @@ selectOrdenBusqueda.addEventListener("change", ()=>{
     buscarCatalogo(buscador.value, catalogo, campo);
   });
 });
-
-
-
-//          ORDENAR CATALOGO
-//ordernar de menor a mayor catalogo x global
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//                        ORDENAR CATALOGO
 function ordenarCatalogo(catalogo, orden) {
   let sortedCatalogo = [].concat(catalogo);
   switch (orden) {
@@ -215,40 +182,74 @@ selectOrden.addEventListener("change", () => {
   console.log(selectOrden.value);
   ordenarCatalogo(catalogo, parseInt(selectOrden.value));
 });
-
-// funciones de miEquipo
-
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//                              MI EQUIPO
 let jugadorComprados = JSON.parse(localStorage.getItem("miEquipo")) || []
-
-function agregarAEquipo(carta) {
-  miEquipo.push(carta);
-  localStorage.setItem("miEquipo", JSON.stringify(miEquipo))
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//                        COMPRAR JUGADOR
+function agregarAEquipo(carta, precio) {
+  if (valorBilletera >= precio) {
+    valorBilletera -= precio;
+    billetera.textContent = valorBilletera.toString();
+    miEquipo.push(carta);
+    Swal.fire({
+      title: 'Jugador Comprado',
+      text: `${carta.nombreApellido} ha sido comprado a ${carta.precio}
+       has quedado con un total de ${valorBilletera}`,
+      // img: `${carta.img}`,  ARREGLAR
+      //imageHeight: 200,
+      icon: 'success',
+      background: 'black',
+      confirmButtonText: 'OK',
+      timer: 4100
+    });
+  } else {
+        Swal.fire({
+      title: 'No tienes suficiente saldo',
+      text: `Te faltan ${precio - valorBilletera}`,
+      // img: `${carta.img}`,  ARREGLAR
+      //imageHeight: 200,
+      icon: 'error',
+      background: 'black',
+      confirmButtonText: 'OK',
+      timer: 4100
+    })
+  }
+      localStorage.setItem("miEquipo", JSON.stringify(miEquipo));
+      localStorage.setItem("valorBilletera", valorBilletera.toString());
 }
-function venderDeEquipo(carta){
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//                        VENDER JUGADOR
+function venderDeEquipo(carta, precio){
+  valorBilletera = valorBilletera + parseInt(precio);
+  billetera.textContent = valorBilletera.toString();
   let cartaIndex = miEquipo.findIndex(c => c.id === carta.id);
-    // Remove the card from the array
     miEquipo.splice(cartaIndex, 1);
     mostrarCatalogo(miEquipo, "vender")
-    localStorage.setItem("miEquipo", JSON.stringify(miEquipo))
+    localStorage.setItem("miEquipo", JSON.stringify(miEquipo)) 
+    localStorage.setItem("valorBilletera", valorBilletera.toString());
+    Swal.fire({
+      title: 'Jugador vendido',
+      text: `${carta.nombreApellido} ha sido vendido
+      has quedado con un total de ${valorBilletera}`,
+      icon: 'success',
+      background: 'black',
+      confirmButtonText: 'OK',
+      timer: 4100
+    })
 }
-
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//                        MOSTRAR MI EQUIPO
 mostrarEquipoBtn.addEventListener("click", ()=>{
 titulo.innerHTML= "Este es tu Equipo"
 mostrarCatalogo(miEquipo, "vender")
 }) 
-
-// PROMESAS 
-const eventoFuturo =(valor)=>{
-  return new Promise((resolve, reject)=>{
-    if(valor == true){
-      resolve("La promesa se ha cumplido")
-    }else{
-      reject("la promesa NO se ha cumplido")
-    }
-
-  })
-}
-console.log(eventoFuturo(false))
-console.log(eventoFuturo(true))
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//                       JUNTAR MONEDAS
+billeteraContainer.addEventListener("dbClick", ()=>{
+valorBilletera++
+billetera.textContent = valorBilletera.toString();
+localStorage.setItem("valorBilletera", valorBilletera.toString());
+})
 
 
