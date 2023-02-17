@@ -3,12 +3,14 @@
 	padding: 0;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Cochin, Georgia, Times, 'Times New Roman', serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 h1{
 	display: flex;
 	justify-content: center;
   font-size: 3em;
+  text-align: center;
+  margin-bottom: 1em;
 }
 h4{
 	margin-bottom: 0;
@@ -143,7 +145,6 @@ background-image: url(../images/cartas/futurestar.webp.png);
 
 
 .btnComprarVender{
-
 margin-top: 1em;
 margin-left: 1em;
 font-weight: 100;
@@ -161,14 +162,12 @@ flex-direction: row;
 align-items: center;
 cursor: pointer;
 text-transform: uppercase;
-}
-
-.btnComprarVender:hover{
+}.btnComprarVender:hover{
 transition : 300ms;
 padding: 10px 25px;
 transform : translateY(-0px);
 background-color: #3b07bf;
-color: #000000;
+font-synthesis: style;
 }
 
 
@@ -196,7 +195,7 @@ color: #000000;
 }
 
 
-/* NAV */
+/*              NAV                           */
 .navcustom{
   background-color: #000000;
   position: fixed;
@@ -204,9 +203,11 @@ color: #000000;
   width: 100%;
   z-index: 100;
 }
-nav a{
+nav a {
   font-size: 2em;
+  text-shadow: rgb(79, 0, 189) 0px 5px 6px;
 }
+
 .nav-item *{
   color: #6f36ff;
 }.container-fluid a{
@@ -238,9 +239,12 @@ nav a{
   border-radius: .3em;
 }#buscadorBtn{
 color: #000000;
-background-color: #3b07bf;
+background-color: #6f36ff;
 border: none;
 transition: 200ms;
+border-radius: .3em;
+height: 2.5em;
+width: 3.5em;
 }#buscadorBtn:hover{
   color: #fff;
 background-color: #23007d;
@@ -269,23 +273,41 @@ background-color: #23007d;
 }.modal-body form input{
   width: 3em;
   border-radius: .2em;
-}.modal-body form #jugadorIngresado{
-  width: 7em;
-}.modal-body form #imgIngresado{
-  width: 12em;
-}.modal-body form .precioModal{
-  width: 12em;
-}.modal-body form .modal-stats{
-  margin-left: 8em;
-}.modal-body form label{
-  margin-left: 1em;
-}.modal-body form .tipoDecartaModal{
-  margin-left: 10.3em;
-}.modal-body form .clubModal{
-  margin-left: 3.7em;
-} form{
-  margin-left: 5em;
-}
+}.nombrePosicionContainer, .paisClubContainer, .globalTipoDeCartaContainer {
+  display: flex;
+  justify-content: space-around;
+  row-gap: 1em;
+}.imgForm, .precioForm{
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+}.modal-stats{
+  display: flex;
+  justify-content: center;
+  column-gap: 1em;
+  margin-top: 1em;
+}.statsRight, .statsLeft{
+  display: flex;
+  flex-direction: column;
+}.statsRight label, .statsLeft label{
+  display: inline;
+}#globalIngresado, .modal-stats .statsLeft input, .modal-stats .statsRight input {
+  width: 2em;
+}#precioIngresado, #jugadorIngresado{
+  width: 8em;
+}#imgIngresado{
+  width: 11em;
+}@media screen and (max-width: 511px) {
+  .nombrePosicionContainer, .paisClubContainer, .globalTipoDeCartaContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    row-gap: .5em;
+  }#imgIngresado{
+    width: 7em;
+  }
+  }
+/* btn */
 #agregarCartaBtn{
   color: #000000;
   background-color: #3b07bf;
@@ -301,6 +323,8 @@ background-color: #23007d;
     background-color: #6f36ff;
   }.btn-close:focus{
     box-shadow: 0 0 0 0.25rem rgba(181, 13, 253, 0.096);;
+  }.btnFix{
+    margin-bottom: 3em;
   }
 
   /* LOADER */
@@ -313,12 +337,20 @@ background-color: #23007d;
     width: auto;
   }.billetera-container{
     display: flex;
-    background-color: #d6d6d6be;
-    height: 1.3em;
+    background-color: #ffffff;
+    border-radius: .3em ;
+    height: 1em;
     align-items: center;
-    
   }.billetera-container h5{
     padding-top: .3em;
+  }#billeteraContainer{
+    border-radius: .3em;
+    padding: 0 .2em;
+    background-color: #ffffff;
+  }@media screen and (max-width: 766px) {
+    .billeteraNoCollapse{
+      display: none;
+    }  
   }
   /*   PACKS */
   .packContainer{
@@ -332,7 +364,12 @@ background-color: #23007d;
     text-align: center;
   }.packContainer button{
     margin-right: 2.5em;
-  }
+  }@media screen and (max-width: 1100px) {
+    .packContainer{
+      display: flex;
+      flex-direction: column;
+      row-gap: 2.5em;
+    }}
 
 /* ANIMATION */
 #animation-element {
@@ -346,11 +383,27 @@ background-color: #23007d;
   justify-content: center;
   align-items: center;
 }
-
 #animation-element img {
   width: 100%;
   height: 100%;
-  z-index: 10000000000000000000000000000000;
+  z-index: 100000000000000000;
 }
+#animation-element-black {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+#animation-element-black img {
+  width: 100%;
+  height: 100%;
+  z-index: 100000000000000000;
+}
+
 
 
