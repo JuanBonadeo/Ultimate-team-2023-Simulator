@@ -14,7 +14,7 @@
     "regate": 95,
     "defensa": 45,
     "fisico": 85,
-    "precio": 2500000
+    "precio": 4500000
   },
   {
     "id": 2,
@@ -31,7 +31,7 @@
     "regate": 90,
     "defensa": 51,
     "fisico": 83,
-    "precio": 800000
+    "precio": 1800000
   },
   {
     "id": 3,
@@ -48,7 +48,7 @@
     "regate": 94,
     "defensa": 45,
     "fisico": 75,
-    "precio": 655000
+    "precio": 1655000
   },
   {
     "id": 4,
@@ -82,7 +82,7 @@
     "regate": 87,
     "defensa": 62,
     "fisico": 81,
-    "precio": 824000
+    "precio": 1024000
   },
   {
     "id": 6,
@@ -99,7 +99,7 @@
     "regate": 80,
     "defensa": 45,
     "fisico": 85,
-    "precio": 667000
+    "precio": 867000
   },
   {
     "id": 7,
@@ -218,7 +218,7 @@
     "regate": 80,
     "defensa": 45,
     "fisico": 75,
-    "precio": 200000
+    "precio": 300000
   },
   {
     "id": 14,
@@ -235,7 +235,7 @@
     "regate": 82,
     "defensa": 45,
     "fisico": 85,
-    "precio": 250000
+    "precio": 950000
   },
   {
     "id": 15,
@@ -279,7 +279,7 @@
     "club": "manchester united",
     "global": 84,
     "posicion": "EI",
-    "tipoDeCarta": "future",
+    "tipoDeCarta": "fut",
     "ritmo": 88,
     "tiro": 80,
     "pase": 75,
@@ -296,7 +296,7 @@
     "club": "barcelona",
     "global": 87,
     "posicion": "MC",
-    "tipoDeCarta": "oro",
+    "tipoDeCarta": "otw",
     "ritmo": 84,
     "tiro": 87,
     "pase": 90,
@@ -310,17 +310,17 @@
     "nombreApellido": "Sergio Aguero",
     "img": "../images/aguero.png",
     "pais": "argentina",
-    "club": "icono",
+    "club": "manchester city",
     "global": 91,
     "posicion": "DC",
-    "tipoDeCarta": "icono",
+    "tipoDeCarta": "hero",
     "ritmo": 87,
     "tiro": 93,
     "pase": 83,
     "regate": 85,
     "defensa": 45,
     "fisico": 80,
-    "precio": 450000
+    "precio": 1450000
   },
   {
     "id": 900,
@@ -354,7 +354,7 @@
     "regate": 87,
     "defensa": 45,
     "fisico": 80,
-    "precio": 540000
+    "precio": 1540000
   },
   {
     "id": 22,
@@ -388,7 +388,7 @@
     "regate": 91,
     "defensa": 64,
     "fisico": 78,
-    "precio": 1300000
+    "precio": 2300000
   },
   {
     "id": 23,
@@ -439,7 +439,7 @@
     "regate": 72,
     "defensa": 93,
     "fisico": 92,
-    "precio": 312000
+    "precio": 712000
   },
   {
     "id": 26,
@@ -456,7 +456,7 @@
     "regate": 97,
     "defensa": 51,
     "fisico": 80,
-    "precio": 1200000
+    "precio": 3200000
   },
   {
     "id": 27,
@@ -473,7 +473,7 @@
     "regate": 92,
     "defensa": 46,
     "fisico": 78,
-    "precio": 295000
+    "precio": 795000
   },
   {
     "id": 28,
@@ -490,7 +490,7 @@
     "regate": 96,
     "defensa": 46,
     "fisico": 78,
-    "precio": 2500000
+    "precio": 2100000
   },
   {
     "id": 29,
@@ -750,7 +750,7 @@
     "regate": 84,
     "defensa": 48,
     "fisico": 88,
-    "precio": 600000
+    "precio": 800000
   },{
     "id": 45,
     "nombreApellido": "Rudiger",
