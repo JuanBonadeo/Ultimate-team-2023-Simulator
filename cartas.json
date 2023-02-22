@@ -109,7 +109,7 @@
     "club": "boca",
     "global": 82,
     "posicion": "EI",
-    "tipoDeCarta": "future star",
+    "tipoDeCarta": "future",
     "ritmo": 88,
     "tiro": 84,
     "pase": 79,
@@ -279,7 +279,7 @@
     "club": "manchester united",
     "global": 84,
     "posicion": "EI",
-    "tipoDeCarta": "future star",
+    "tipoDeCarta": "future",
     "ritmo": 88,
     "tiro": 80,
     "pase": 75,
@@ -336,8 +336,25 @@
     "pase": 86,
     "regate": 87,
     "defensa": 45,
-    "fisico": 78,
+    "fisico": 82,
     "precio": 340000
+  },
+  {
+    "id": 21,
+    "nombreApellido": "Modric",
+    "img": "../images/modric.png",
+    "pais": "croacia",
+    "club": "real madrid",
+    "global": 92,
+    "posicion": "MC",
+    "tipoDeCarta": "ucl",
+    "ritmo": 84,
+    "tiro": 90,
+    "pase": 92,
+    "regate": 87,
+    "defensa": 45,
+    "fisico": 80,
+    "precio": 540000
   },
   {
     "id": 22,
@@ -372,8 +389,8 @@
     "defensa": 64,
     "fisico": 78,
     "precio": 600000
-},
-{
+  },
+  {
     "id": 23,
     "nombreApellido": "Lewandowski",
     "img": "../images/lewandowski.png",
@@ -389,8 +406,8 @@
     "defensa": 44,
     "fisico": 80,
     "precio": 220000
-},
-{
+  },
+  {
     "id": 24,
     "nombreApellido": "Salah",
     "img": "../images/salah.png",
@@ -406,8 +423,8 @@
     "defensa": 45,
     "fisico": 75,
     "precio": 260000
-},
-{
+  },
+  {
     "id": 25,
     "nombreApellido": "Virgil van Dijk",
     "img": "../images/vandijk.png",
@@ -423,8 +440,8 @@
     "defensa": 93,
     "fisico": 92,
     "precio": 312000
-},
-{
+  },
+  {
     "id": 26,
     "nombreApellido": "Maradona",
     "img": "../images/maradona.png",
@@ -440,8 +457,8 @@
     "defensa": 51,
     "fisico": 80,
     "precio": 1200000
-},
-{
+  },
+  {
     "id": 27,
     "nombreApellido": "Sadio Mane",
     "img": "../images/mane.png",
@@ -457,6 +474,5 @@
     "defensa": 46,
     "fisico": 78,
     "precio": 295000
-}
+  }
 ]
-

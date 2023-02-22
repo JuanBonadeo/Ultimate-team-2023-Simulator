@@ -1,202 +1,251 @@
 * {
-	margin: 0;
-	padding: 0;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-h1{
-	display: flex;
-	justify-content: center;
+/*  FONTS */
+/* ------------------------------------------------------------------------------------------------------ */
+h1 {
+  display: flex;
+  justify-content: center;
   font-size: 3em;
   text-align: center;
   margin-bottom: 1em;
 }
-h4{
-	margin-bottom: 0;
+h4 {
+  margin-bottom: 0;
 }
-body{
-	background-color: #6f36ff;
-	height: max-content;
+/* ------------------------------------------------------------------------------------------------------ */
+/* CARTAS DIV  CUSTOM */
+body {
+  background-color: #6f36ff;
+  height: max-content;
 }
-.global h4, .posicion h4{
-font-size: 1.55em;
-margin-left: .8em;
-}.global h4{
+.global h4,
+.posicion h4 {
+  font-size: 1.55em;
+  margin-left: 0.8em;
+}
+.global h4 {
   font-size: 2em;
 }
-.margint{
-	padding-top: 7rem;
+.margint {
+  padding-top: 7rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}	
-#cartas{
+}
+#cartas {
   margin-left: 4em;
-}@media screen and (max-width: 400px) {
-#cartas{
-  flex-direction: column;
-  margin-left: 0;
 }
+@media screen and (max-width: 400px) {
+  #cartas {
+    flex-direction: column;
+    margin-left: 0;
+  }
 }
-.cartas{
-	width: 15rem; 
-	height: 23rem;
-	display: grid;
-	align-items: center;
-	padding-top: 1.8em;
+.cartas {
+  width: 15rem;
+  height: 23rem;
+  display: grid;
+  align-items: center;
+  padding-top: 1.8em;
 }
-.oro{
+.oro, .icono, .toty, .future, .totw, .futchamps, .ucl, .hero, .otw{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.oro {
   background-image: url(../images/cartas/oro.webp.png);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover ;
+  
 }
-.icono{
-	background-image: url(../images/cartas/icono.webp.png);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover ;
+.icono {
+  background-image: url(../images/cartas/icono.webp.png);
+
 }
-.toty{
-background-image: url(../images/cartas/toty.webp.png);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover ;
+.toty {
+  background-image: url(../images/cartas/toty.webp.png);
+
   color: #ffcd4e;
 }
-.totw{
-background-image: url(../images/cartas/totw.webp.png);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover ;
-  color: #f1f37d;
-}.future{
-background-image: url(../images/cartas/futurestar.webp.png);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover ;
+.totw {
+  background-image: url(../images/cartas/totw.webp.png);
+  color: #e3c560;
+}
+.future {
+  background-image: url(../images/cartas/futurestar.webp.png);
   color: #ffffff;
 }
-.cartas-container {  
-	display: grid; 
-  grid-template-columns: 0.7fr 1.4fr; 
-  grid-template-rows: 0.2fr 0.2fr 0.3fr 0.3fr 0.2fr 0.3fr 0.3fr 0.3fr; 
-  gap: 0px -30px; 
-  grid-template-areas: 
+.ucl {
+  background-image: url(../images/cartas/ucl.webp.png);
+  color: #00dffd;
+}.otw {
+  background-image: url(../images/cartas/otw.webp.png);
+  color: #f7ec45;
+}.futchamps {
+  background-image: url(../images/cartas/fut.webp.png);
+  color: #d0b368;
+}.hero {
+  background-image: url(../images/cartas/hero.webp.png);
+  color: #dcd6c5;
+}
+
+.cartas-container {
+  display: grid;
+  grid-template-columns: 0.7fr 1.4fr;
+  grid-template-rows: 0.2fr 0.2fr 0.3fr 0.3fr 0.2fr 0.3fr 0.3fr 0.3fr;
+  gap: 0px -30px;
+  grid-template-areas:
     "global img"
     "posicion img"
     "pais img"
     "club img"
     "nombreApellido nombreApellido"
-    "card-stats card-stats"; 
-  justify-items: center; 
-  width: 70%; 
+    "card-stats card-stats";
+  justify-items: center;
+  width: 70%;
 }
 .posicion {
-  justify-self: center; 
-  align-self: center; 
-  grid-area: posicion;  
+  justify-self: center;
+  align-self: center;
+  grid-area: posicion;
 }
 .global {
-  justify-self: center; 
-  align-self: center; 
+  justify-self: center;
+  align-self: center;
   grid-area: global;
   font-weight: bold;
 }
 .pais {
-	display: flex;
-	justify-content: end; 
-	align-items: center;
-  grid-area: pais; 
-  height: 30px; width: 70px;  
-  margin-left: .9em;
-  margin-top: .5em;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  grid-area: pais;
+  height: 30px;
+  width: 70px;
+  margin-left: 0.9em;
+  margin-top: 0.5em;
 }
 .club {
-	display: flex;
-  justify-content: end; 
-  align-items: center; 
-  grid-area: club; 
-  height: 35px; width: 50px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  grid-area: club;
+  height: 35px;
+  width: 50px;
   margin-left: 1.4em;
-  
 }
 .img {
-  justify-self: start; 
-  align-self: center; 
-  height: 10em; width: 9em;
-  grid-area: img; 
+  justify-self: start;
+  align-self: center;
+  height: 10em;
+  width: 9em;
+  grid-area: img;
 }
 .nombreApellido {
-  justify-self: center; 
-  align-self: center; 
+  justify-self: center;
+  align-self: center;
   grid-area: nombreApellido;
-   
 }
 
-.ritmo { grid-area: ritmo; }
-.regate { grid-area: regate; }
-.tiro { grid-area: tiro; }
-.pase { grid-area: pase; }
-.fisico { grid-area: fisico; }
-.defensa { grid-area: defensa; }
-
-
-.btnComprarVender{
-margin-top: 1em;
-margin-left: 1em;
-font-weight: 100;
-font-size: 14px;
-color: #ffffff;
-background-color: #23007d;
-padding: 10px 30px;
-border: none;
-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-border-radius: 20px 50px;
-transition : 300ms;
-transform: translateY(0);
-display: flex;
-flex-direction: row;
-align-items: center;
-cursor: pointer;
-text-transform: uppercase;
-}.btnComprarVender:hover{
-transition : 300ms;
-padding: 10px 25px;
-transform : translateY(-0px);
-background-color: #3b07bf;
-font-synthesis: style;
+.ritmo {
+  grid-area: ritmo;
 }
-
-
+.regate {
+  grid-area: regate;
+}
+.tiro {
+  grid-area: tiro;
+}
+.pase {
+  grid-area: pase;
+}
+.fisico {
+  grid-area: fisico;
+}
+.defensa {
+  grid-area: defensa;
+}
 .card-stats {
-  display: grid; 
-  grid-template-columns: 1fr 1fr; 
-  grid-template-rows: 1fr 1fr 1fr; 
-  grid-template-areas: 
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
     "ritmo regate"
     "tiro defensa"
-    "pase fisico"; 
-  justify-content: center; 
-  align-content: center; 
-  justify-items: center; 
-  align-items: center; 
-  justify-self: center; 
-  align-self: center; 
-  grid-area: card-stats; 
-  width: 80%; 
-  height: 40%; 
-  padding-top: .5em;
+    "pase fisico";
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  justify-self: center;
+  align-self: center;
+  grid-area: card-stats;
+  width: 80%;
+  height: 40%;
+  padding-top: 0.5em;
 }
-.card-stats p{
-	margin: 0;
+.card-stats p {
+  margin: 0;
 }
-
-
-/*              NAV                           */
-.navcustom{
+/* ------------------------------------------------------------------------------------------------------ */
+/* BTN COMPRAR VENDER */
+.btnComprarVender {
+  margin-top: 1em;
+  margin-left: 1em;
+  font-weight: 100;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #23007d;
+  padding: 10px 30px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 20px 50px;
+  transition: 300ms;
+  transform: translateY(0);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.btnComprarVender:hover {
+  transition: 300ms;
+  padding: 10px 25px;
+  transform: translateY(-0px);
+  background-color: #3b07bf;
+  font-synthesis: style;
+}
+/* btn */
+#agregarCartaBtn {
+  color: #000000;
+  background-color: #3b07bf;
+  border: none;
+  transition: 200ms;
+}
+#agregarCartaBtn:hover {
+  color: #fff;
+  background-color: #23007d;
+}
+.btn-close {
+  width: 24px;
+  border-radius: 0.5em;
+  background-color: #6f36ff;
+}
+.btn-close:focus {
+  box-shadow: 0 0 0 0.25rem rgba(181, 13, 253, 0.096);
+}
+.btnFix {
+  margin-bottom: 3em;
+}
+/* ------------------------------------------------------------------------------------------------------ */
+/*            NAV               */
+.navcustom {
   background-color: #000000;
   position: fixed;
   top: 0;
@@ -208,170 +257,192 @@ nav a {
   text-shadow: rgb(79, 0, 189) 0px 5px 6px;
 }
 
-.nav-item *{
+.nav-item * {
   color: #6f36ff;
-}.container-fluid a{
+}
+.container-fluid a {
   font-size: 1em;
 }
-.container-fluid a:hover{
+.container-fluid a:hover {
   color: #3b07bf;
-}.container-fluid .navbar-brand {
+}
+.container-fluid .navbar-brand {
   font-size: 1.4em;
   font-weight: bold;
   cursor: default;
 }
-.container-fluid select{
+.container-fluid select {
   background-color: #00000000;
   border: none;
-  font-size: 1em ;
-  cursor:pointer;
+  font-size: 1em;
+  cursor: pointer;
   gap: 5px;
   margin: 0px 0.3em;
-}.container-fluid select option{
- background-color: #000000;
-}select option:hover{
- background-color: #0a021f;
-} .container-fluid .buscarPor{
+}
+.container-fluid select option {
+  background-color: #000000;
+}
+select option:hover {
+  background-color: #0a021f;
+}
+.container-fluid .buscarPor {
   width: min-content;
 }
-.navbar-toggler-icon{
+.navbar-toggler-icon {
   background-color: #3b07bf;
-  border-radius: .3em;
-}#buscadorBtn{
-color: #000000;
-background-color: #6f36ff;
-border: none;
-transition: 200ms;
-border-radius: .3em;
-height: 2.5em;
-width: 3.5em;
-}#buscadorBtn:hover{
-  color: #fff;
-background-color: #23007d;
-}.btn-close-nav{
-  background-image: url("https://cdn-icons-png.flaticon.com/512/5107/5107718.png");
-  width:24px; 
-  border-radius: .5em;
+  border-radius: 0.3em;
+}
+#buscadorBtn {
+  color: #000000;
   background-color: #6f36ff;
-}.btn-close:focus{
-  box-shadow: 0 0 0 0.25rem rgba(181, 13, 253, 0.096);;
+  border: none;
+  transition: 200ms;
+  border-radius: 0.3em;
+  height: 2.5em;
+  width: 3.5em;
+}
+#buscadorBtn:hover {
+  color: #fff;
+  background-color: #23007d;
+}
+.btn-close-nav {
+  background-image: url("https://cdn-icons-png.flaticon.com/512/5107/5107718.png");
+  width: 24px;
+  border-radius: 0.5em;
+  background-color: #6f36ff;
+}
+.btn-close:focus {
+  box-shadow: 0 0 0 0.25rem rgba(181, 13, 253, 0.096);
 }
 
-/* Modal agregar jugador */
+/* ------------------------------------------------------------------------------------------------------ */
+/*            MODAL AGREGAR JUGADOR             */
 
-.modal{
+.modal {
   margin-top: 2em;
-}.modal-content{
+}
+.modal-content {
   background-color: #000000eb;
   color: #6f36ff;
-}.modal-title{
+}
+.modal-title {
   font-weight: 700;
-}.modal-body form select{
-  border-radius: .5em;
+}
+.modal-body form select {
+  border-radius: 0.5em;
   background-color: #000000;
   color: #fff;
-}.modal-body form input{
+}
+.modal-body form input {
   width: 3em;
-  border-radius: .2em;
-}.nombrePosicionContainer, .paisClubContainer, .globalTipoDeCartaContainer {
+  border-radius: 0.2em;
+}
+.nombrePosicionContainer,
+.paisClubContainer,
+.globalTipoDeCartaContainer {
   display: flex;
   justify-content: space-around;
   row-gap: 1em;
-}.imgForm, .precioForm{
+}
+.imgForm,
+.precioForm {
   display: flex;
   justify-content: center;
   margin-top: 1em;
-}.modal-stats{
+}
+.modal-stats {
   display: flex;
   justify-content: center;
   column-gap: 1em;
   margin-top: 1em;
-}.statsRight, .statsLeft{
+}
+.statsRight,
+.statsLeft {
   display: flex;
   flex-direction: column;
-}.statsRight label, .statsLeft label{
+}
+.statsRight label,
+.statsLeft label {
   display: inline;
-}#globalIngresado, .modal-stats .statsLeft input, .modal-stats .statsRight input {
+}
+#globalIngresado,
+.modal-stats .statsLeft input,
+.modal-stats .statsRight input {
   width: 2em;
-}#precioIngresado, #jugadorIngresado{
+}
+#precioIngresado,
+#jugadorIngresado {
   width: 8em;
-}#imgIngresado{
+}
+#imgIngresado {
   width: 11em;
-}@media screen and (max-width: 511px) {
-  .nombrePosicionContainer, .paisClubContainer, .globalTipoDeCartaContainer {
+}
+@media screen and (max-width: 511px) {
+  .nombrePosicionContainer,
+  .paisClubContainer,
+  .globalTipoDeCartaContainer {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    row-gap: .5em;
-  }#imgIngresado{
+    row-gap: 0.5em;
+  }
+  #imgIngresado {
     width: 7em;
   }
-  }
-/* btn */
-#agregarCartaBtn{
-  color: #000000;
-  background-color: #3b07bf;
-  border: none;
-  transition: 200ms;
-  }#agregarCartaBtn:hover{
-    color: #fff;
-  background-color: #23007d;
-  }
-  .btn-close{
-    width:24px; 
-    border-radius: .5em;
-    background-color: #6f36ff;
-  }.btn-close:focus{
-    box-shadow: 0 0 0 0.25rem rgba(181, 13, 253, 0.096);;
-  }.btnFix{
-    margin-bottom: 3em;
-  }
+}
+/* ------------------------------------------------------------------------------------------------------ */
+/*                        LOADER                           */
+#loader {
+  margin-top: 12em;
+}
+/* ------------------------------------------------------------------------------------------------------ */
+/*                        COINS                                      */
+.coins {
+  height: 1em;
+  width: auto;
+}
+.billetera-container {
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 0.3em;
+  height: 1em;
+  align-items: center;
+}
+.billetera-container h5 {
+  padding-top: 0.3em;
+}
+#billeteraContainer {
+  border-radius: 0.3em;
+  padding: 0 0.2em;
+  background-color: #ffffff;
+}
 
-  /* LOADER */
-  #loader{
-    margin-top: 12em;
-  }
-  /* COINS */
-  .coins{
-    height: 1em;
-    width: auto;
-  }.billetera-container{
+/* ------------------------------------------------------------------------------------------------------ */
+/*                         PACKS                           */
+.packContainer {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  column-gap: 2.5em;
+  margin-bottom: 3em;
+}
+.packContainer div {
+  background-color: #00000037;
+  color: #fff;
+  text-align: center;
+}
+.packContainer button {
+  margin-right: 1em;
+}
+@media screen and (max-width: 1100px) {
+  .packContainer {
     display: flex;
-    background-color: #ffffff;
-    border-radius: .3em ;
-    height: 1em;
-    align-items: center;
-  }.billetera-container h5{
-    padding-top: .3em;
-  }#billeteraContainer{
-    border-radius: .3em;
-    padding: 0 .2em;
-    background-color: #ffffff;
-  }@media screen and (max-width: 766px) {
-    .billeteraNoCollapse{
-      display: none;
-    }  
+    flex-direction: column;
+    row-gap: 2.5em;
   }
-  /*   PACKS */
-  .packContainer{
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    column-gap: 2.5em;
-  }.packContainer div{
-    background-color: #00000037;
-    color: #fff;
-    text-align: center;
-  }.packContainer button{
-    margin-right: 2.5em;
-  }@media screen and (max-width: 1100px) {
-    .packContainer{
-      display: flex;
-      flex-direction: column;
-      row-gap: 2.5em;
-    }}
-
-/* ANIMATION */
+}
+/* ------------------------------------------------------------------------------------------------------ */
+/*                      ANIMATION                            */
 #animation-element {
   position: absolute;
   top: 0;
@@ -404,6 +475,3 @@ background-color: #23007d;
   height: 100%;
   z-index: 100000000000000000;
 }
-
-
-

@@ -1,5 +1,21 @@
 class Carta {
-  constructor(id, nombreApellido, img, pais, club, global, posicion, tipoDeCarta, ritmo, tiro, pase, regate, defensa, fisico, precio) {
+  constructor(
+    id,
+    nombreApellido,
+    img,
+    pais,
+    club,
+    global,
+    posicion,
+    tipoDeCarta,
+    ritmo,
+    tiro,
+    pase,
+    regate,
+    defensa,
+    fisico,
+    precio
+  ) {
     this.id = id;
     this.nombreApellido = nombreApellido;
     this.img = img;
@@ -46,24 +62,38 @@ const cargarCatalogo = async () => {
 };
 
 if (localStorage.getItem("catalogo")) {
-  for(let carta of JSON.parse(localStorage.getItem("catalogo"))){
-    let cartaNueva = new Carta(carta.id, carta.nombreApellido, carta.img, carta.pais, carta.club, carta.global, carta.posicion, carta.tipoDeCarta, carta.ritmo, carta.tiro, carta.pase, carta.regate, carta.defensa, carta.fisico, carta.precio)
-    catalogo.push(cartaNueva)
-}
-console.log(catalogo)
+  for (let carta of JSON.parse(localStorage.getItem("catalogo"))) {
+    let cartaNueva = new Carta(
+      carta.id,
+      carta.nombreApellido,
+      carta.img,
+      carta.pais,
+      carta.club,
+      carta.global,
+      carta.posicion,
+      carta.tipoDeCarta,
+      carta.ritmo,
+      carta.tiro,
+      carta.pase,
+      carta.regate,
+      carta.defensa,
+      carta.fisico,
+      carta.precio
+    );
+    catalogo.push(cartaNueva);
+  }
 } else {
   console.log("Seteando catálogo de cartas");
   cargarCatalogo(catalogo);
 }
 
-
-let miEquipo = []
-if(localStorage.getItem("miEquipo")){
-    miEquipo = JSON.parse(localStorage.getItem("miEquipo"))
-}else{
-    //entra por primera vez
-    miEquipo.push()
-    localStorage.setItem("miEquipo", JSON.stringify(miEquipo))
+let miEquipo = [];
+if (localStorage.getItem("miEquipo")) {
+  miEquipo = JSON.parse(localStorage.getItem("miEquipo"));
+} else {
+  //entra por primera vez
+  miEquipo.push();
+  localStorage.setItem("miEquipo", JSON.stringify(miEquipo));
 }
 
 if (localStorage.getItem("valorBilletera")) {
@@ -74,7 +104,3 @@ if (localStorage.getItem("valorBilletera")) {
   valorBilletera = 150000; // Valor predeterminado
   localStorage.setItem("valorBilletera", JSON.stringify(valorBilletera));
 }
-
-
-
-
