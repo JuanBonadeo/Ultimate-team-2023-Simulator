@@ -379,16 +379,16 @@
     "img": "../images/debruyne.png",
     "pais": "belgica",
     "club": "manchester city",
-    "global": 94,
+    "global": 97,
     "posicion": "MC",
     "tipoDeCarta": "toty",
-    "ritmo": 76,
-    "tiro": 91,
-    "pase": 97,
-    "regate": 91,
-    "defensa": 64,
-    "fisico": 78,
-    "precio": 2300000
+    "ritmo": 85,
+    "tiro": 94,
+    "pase": 98,
+    "regate": 94,
+    "defensa": 81,
+    "fisico": 86,
+    "precio": 2900000
   },
   {
     "id": 23,
@@ -559,7 +559,8 @@
     "defensa": 82,
     "fisico": 90,
     "precio": 1800000
-  },{
+  },
+  {
     "id": 33,
     "nombreApellido": "Vinicius Jr",
     "img": "../images/vini.png",
@@ -575,7 +576,8 @@
     "defensa": 45,
     "fisico": 72,
     "precio": 560000 
-  },{
+  },
+  {
     "id": 34,
     "nombreApellido": "Joao Cancelo",
     "img": "../images/cancelo.png",
@@ -591,7 +593,8 @@
     "defensa": 82,
     "fisico": 80,
     "precio": 260000
-  },{
+  },
+  {
     "id": 35,
     "nombreApellido": "Forlan",
     "img": "../images/forlan.png",
@@ -607,12 +610,13 @@
     "defensa": 45,
     "fisico": 80,
     "precio": 1200000
-  },{
+  },
+  {
     "id": 36,
     "nombreApellido": "Son",
     "img": "../images/son.png",
     "pais": "korea",
-    "club": "totenham",
+    "club": "tottenham",
     "global": 91 ,
     "posicion": "EI",
     "tipoDeCarta": "ucl",
@@ -623,7 +627,8 @@
     "defensa": 44,
     "fisico": 75,
     "precio": 1150000
-  },{
+  },
+  {
     "id": 37 ,
     "nombreApellido": "Di Maria",
     "img": "../images/dimaria.png",
@@ -639,7 +644,8 @@
     "defensa": 53,
     "fisico": 76,
     "precio": 1600000
-  },{
+  },
+  {
     "id": 38,
     "nombreApellido": "Courtois",
     "img": "../images/courtois.png",
@@ -655,7 +661,8 @@
     "defensa": 84,
     "fisico": 90,
     "precio": 900000
-  },{
+  },
+  {
     "id": 39,
     "nombreApellido": "de Jong",
     "img": "../images/dejong.png",
@@ -671,7 +678,8 @@
     "defensa": 82,
     "fisico": 84,
     "precio": 700000
-  },{
+  },
+  {
     "id": 40,
     "nombreApellido": "Dybala",
     "img": "../images/dybala.png",
@@ -687,7 +695,8 @@
     "defensa": 50,
     "fisico": 73,
     "precio": 1000000
-  },{
+  },
+  {
     "id": 41,
     "nombreApellido": "Kante",
     "img": "../images/kante.png",
@@ -703,7 +712,8 @@
     "defensa": 87,
     "fisico": 80,
     "precio": 350000
-  },{
+  },
+  {
     "id": 42,
     "nombreApellido": "Zidane",
     "img": "../images/zidane.png",
@@ -719,7 +729,8 @@
     "defensa": 58,
     "fisico": 78,
     "precio": 2300000
-  },{
+  },
+  {
     "id": 43,
     "nombreApellido": "Adeyami",
     "img": "../images/adeyami.png",
@@ -735,12 +746,13 @@
     "defensa": 56,
     "fisico": 75,
     "precio": 100000
-  },{
+  },
+  {
     "id": 44,
     "nombreApellido": "Kane",
     "img": "../images/kane.png",
     "pais": "inglaterra",
-    "club": "totenham",
+    "club": "tottenham",
     "global": 90,
     "posicion": "DC",
     "tipoDeCarta": "totw",
@@ -751,7 +763,8 @@
     "defensa": 48,
     "fisico": 88,
     "precio": 800000
-  },{
+  },
+  {
     "id": 45,
     "nombreApellido": "Rudiger",
     "img": "../images/rudiger.png",
@@ -767,7 +780,8 @@
     "defensa": 86,
     "fisico": 85,
     "precio": 230000
-  },{
+  },
+  {
     "id": 46 ,
     "nombreApellido": "Martinez",
     "img": "../images/licha.png",
@@ -783,7 +797,8 @@
     "defensa": 87,
     "fisico": 83,
     "precio": 180000
-  },{
+  },
+  {
     "id": 47,
     "nombreApellido": "Ødegaard",
     "img": "../images/odegard.png",
@@ -799,7 +814,8 @@
     "defensa": 65,
     "fisico": 70,
     "precio": 450000
-  },{
+  },
+  {
     "id": 48,
     "nombreApellido": "Ronaldo",
     "img": "../images/gordoronaldo.png",
@@ -815,7 +831,8 @@
     "defensa": 46,
     "fisico": 78,
     "precio": 2300000
-  },{
+  },
+  {
     "id": 49,
     "nombreApellido": "Bale",
     "img": "../images/bale.png",
@@ -831,7 +848,8 @@
     "defensa": 53,
     "fisico": 77,
     "precio": 1300000
-  },{
+  },
+  {
     "id": 50 ,
     "nombreApellido": "Zanetti",
     "img": "../images/zanetti.png",
@@ -847,6 +865,41 @@
     "defensa": 90,
     "fisico": 81,
     "precio": 1400000
+  },
+  {
+    "id": 50 ,
+    "nombreApellido": "Hakimi",
+    "img": "../images/hakimi.png",
+    "pais": "marruecos",
+    "club": "psg",
+    "global": 94,
+    "posicion": "DFD",
+    "tipoDeCarta": "toty",
+    "ritmo": 99,
+    "tiro": 81,
+    "pase": 90,
+    "regate": 91,
+    "defensa": 90,
+    "fisico": 91,
+    "precio": 2500000
+  }, 
+  {
+    "id": 51 ,
+    "nombreApellido": "Hernandez",
+    "img": "../images/hernandez.png",
+    "pais": "francia",
+    "club": "milan",
+    "global": 94,
+    "posicion": "DFI",
+    "tipoDeCarta": "toty",
+    "ritmo": 94,
+    "tiro": 89,
+    "pase": 75,
+    "regate": 90,
+    "defensa": 88,
+    "fisico": 92,
+    "precio": 2400000
   }
+  
 
 ]

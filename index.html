@@ -19,84 +19,50 @@
     <link rel="stylesheet" type="text/css" href="./CSS/main.css" />
   </head>
   <body>
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
     <!-- NAV Bar Boostrap -->
+    <!-- NAV Bar NO COLLAPSE -->
     <nav class="navbar navbar-expand-md navcustom nav-item">
       <div class="container-fluid">
-        <a class="navbar-brand nav-item">FUT 23</a>
-        <button
-          class="navbar-toggler btn-close btn-close-nav"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          aria-label="Close"
-        ></button>
-        <div
-          class="collapse navbar-collapse"
-          data-bs-toggle="collapse"
-          id="navbarSupportedContent"
-        >
+        <a class="navbar-brand nav-item">
+          FUT 23
+        </a>
+        <button id="billeteraContainer">
+              <div class="billetera-container billeteraNoCollapse">
+                <h5 id="billetera">150000</h5>
+                <img class="coins img-fluid" src="https://cdn-icons-png.flaticon.com/512/2530/2530538.png" alt="source"/>
+              </div>
+        </button>
+        <button class="navbar-toggler btn-close btn-close-nav" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" aria-label="Close"></button>
+        <!-- NAV Bar  COLLAPSE -->
+        <div class="collapse navbar-collapse" data-bs-toggle="collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a
-                id="mostarCatalogo"
-                type="button"
-                class="nav-link active"
-                aria-label="Toggle navigation"
-                aria-label="Close"
-                >Ver Catálogo</a
-              >
+              <a id="mostarCatalogo" type="button" class="nav-link active" aria-label="Toggle navigation" aria-label="Close" >
+                Ver Catálogo
+              </a>
             </li>
-
             <li class="nav-item">
-              <a
-                type="button"
-                class="nav-link active"
-                data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop"
-                aria-label="Close"
-              >
+              <a type="button" class="nav-link active" data-bs-toggle="modal" data-bs-target="#staticBackdrop" aria-label="Close">
                 Agregar Jugador
               </a>
             </li>
             <li class="nav-item">
-              <a
-                type="button"
-                id="mostrarEquipoBtn"
-                class="nav-link active"
-                aria-label="Close"
-                >Mi Equipo</a
-              >
+              <a type="button" id="mostrarEquipoBtn" class="nav-link active" aria-label="Close">
+                Mi Equipo
+              </a>
             </li>
             <li class="nav-item">
-              <a
-                type="button"
-                id="mostrarTiendaBtn"
-                class="nav-link active"
-                aria-label="Close"
-                >Tienda</a
-              >
+              <a type="button" id="mostrarTiendaBtn" class="nav-link active" aria-label="Close">
+                Tienda
+              </a>
             </li>
-            <button id="billeteraContainer">
-              <div class="billetera-container billeteraNoCollapse">
-                <h5 id="billetera">150000</h5>
-                <img
-                  class="coins img-fluid"
-                  src="https://cdn-icons-png.flaticon.com/512/2530/2530538.png"
-                  alt="source"
-                />
-              </div>
-            </button>
+            
           </ul>
 
           <!-- Parte derecha del nav -->
           <form class="nav-item">
-            <select
-              id="selectOrden"
-              class="form-select form-select-sm nav-link active"
-              aria-label=".form-select-sm example"
-            >
+            <select id="selectOrden" class="form-select form-select-sm nav-link active" aria-label=".form-select-sm example">
               <option selected>Ordenar</option>
               <option value="1" aria-label="Close">Ascendente🔝</option>
               <option value="2" aria-label="Close">Descendente⬇️</option>
@@ -106,11 +72,7 @@
             </select>
           </form>
           <form class="d-flex" role="search">
-            <select
-              id="selectOrdenBusqueda"
-              class="form-select form-select-sm nav-link active nav-item buscarPor"
-              aria-label=".form-select-sm example"
-            >
+            <select id="selectOrdenBusqueda" class="form-select form-select-sm nav-link active nav-item buscarPor" aria-label=".form-select-sm example">
               <option selected>Buscar Por -</option>
               <option value="1" aria-label="Close">Nombre</option>
               <option value="2" aria-label="Close">Poscicion</option>
@@ -118,29 +80,17 @@
               <option value="4" aria-label="Close">Club</option>
               <option value="5" aria-label="Close">Calidad</option>
             </select>
-            <input
-              class="form-control me-2 nav-item nav-input"
-              id="buscador"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button
-              class="btn-outline-success nav-item"
-              id="buscadorBtn"
-              aria-label="Close"
-            >
-              <img
-                src="https://cdn-icons-png.flaticon.com/512/3641/3641364.png"
-                style="width: 1.4em"
-              />
+            <input class="form-control me-2 nav-item nav-input" id="buscador" type="search" placeholder="Search" aria-label="Search"/>
+            <button class="btn-outline-success nav-item" id="buscadorBtn" aria-label="Close">
+              <img src="https://cdn-icons-png.flaticon.com/512/3641/3641364.png" style="width: 1.4em"/>
             </button>
           </form>
         </div>
       </div>
     </nav>
     <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-    <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+    <!-- MAIN -->
     <main>
       <!-- Container cartas -->
       <div class="container margint">
@@ -149,6 +99,7 @@
         <div id="cartas" class="row"></div>
       </div>
       <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+      
       <!-- Loadader-->
       <div class="d-flex justify-content-center" id="loader">
         <h3 id="loaderTexto" class="text-dark text-center">Cargando</h3>
@@ -157,53 +108,29 @@
         </div>
       </div>
       <div id="animation-element">
-        <img
-          src="https://images.ctfassets.net/b4k16c7lw5ut/blog-Transitions-2.gif/7147e8a34ea8b2b47956f81d2feabfba/Transitions-2.gif"
-          alt=""
-        />
+        <img src="https://images.ctfassets.net/b4k16c7lw5ut/blog-Transitions-2.gif/7147e8a34ea8b2b47956f81d2feabfba/Transitions-2.gif" alt="fifa-animation"/>
       </div>
       <div id="animation-element-black">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Black_from_a_camera.jpg/1200px-Black_from_a_camera.jpg"
-          alt=""
-        />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Black_from_a_camera.jpg/1200px-Black_from_a_camera.jpg" alt="black"/>
       </div>
       <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+      
       <!-- Modal  AGREGAR JUGADOR-->
-      <div
-        class="modal fade"
-        id="staticBackdrop"
-        data-bs-backdrop="static"
-        data-bs-keyboard="false"
-        tabindex="-1"
-        aria-labelledby="staticBackdropLabel"
-        aria-hidden="true"
-      >
+      <div class="modal fade"id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header">
               <h1 class="modal-title fs-5" id="staticBackdropLabel">
                 Agregar Jugador
               </h1>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body my-3 container">
               <form id="agregarCartaModal">
                 <div class="nombrePosicionContainer">
                   <div class="nombreForm">
-                    <label class="nombreIngresado" for="nombreApellido"
-                      >Nombre y Apellido:</label
-                    >
-                    <input
-                      type="text"
-                      id="jugadorIngresado"
-                      name="nombreApellido"
-                    />
+                    <label class="nombreIngresado" for="nombreApellido">Nombre y Apellido:</label>
+                    <input type="text" id="jugadorIngresado" name="nombreApellido"/>
                   </div>
                   <div class="posicionForm">
                     <label for="posicion">Poscicion:</label>
@@ -293,9 +220,7 @@
                     <input type="number" id="globalIngresado" name="global" />
                   </div>
                   <div class="tipoDeCartaForm">
-                    <label for="tipoDecarta" class="tipoDecartaModal"
-                      >Ingrese calidad:</label
-                    >
+                    <label for="tipoDecarta" class="tipoDecartaModal">Ingrese calidad:</label>
                     <select id="tipoDeCartaIngresado" name="tipoDeCarta">
                       <option value=""></option>
                       <option value="oro">ORO</option>
@@ -312,31 +237,21 @@
                 </div>
                 <div class="imgForm">
                   <label for="img" class="imgModal">Ingrese imagen:</label>
-                  <input
-                    placeholder="direccion de su img.png"
-                    type="text"
-                    id="imgIngresado"
-                    name="img"
-                  />
+                  <input placeholder="direccion de su img.png" type="text" id="imgIngresado" name="img"/>
                 </div>
                 <div class="precioForm">
                   <label for="precio">Precio:</label>
-                  <input
-                    type="number"
-                    id="precioIngresado"
-                    name="precio"
-                    class="precioModal"
-                  />
+                  <input type="number" id="precioIngresado" name="precio" class="precioModal"/>
                 </div>
                 <div class="modal-stats">
                   <div class="statsLeft">
                     <div class="stat">
-                      <label for="ritmo">Ritmo:</label
-                      ><input type="text" id="ritmoIngresado" name="ritmo" />
+                      <label for="ritmo">Ritmo:</labe>
+                        <input type="text" id="ritmoIngresado" name="ritmo" />
                     </div>
                     <div class="stat">
-                      <label for="tiro">Tiro:</label
-                      ><input type="text" id="tiroIngresado" name="tiro" />
+                      <label for="tiro">Tiro:</label>
+                      <input type="text" id="tiroIngresado" name="tiro" />
                     </div>
                     <div class="stat">
                       <label for="pase">Pase:</label>
@@ -345,31 +260,23 @@
                   </div>
                   <div class="statsRight">
                     <div class="stat">
-                      <label for="regate">Regate:</label
-                      ><input type="text" id="regateIngresado" name="regate" />
+                      <label for="regate">Regate:</label>
+                      <input type="text" id="regateIngresado" name="regate" />
                     </div>
                     <div class="stat">
-                      <label for="defensa">Defensa:</label
-                      ><input
-                        type="text"
-                        id="defensaIngresado"
-                        name="defensa"
-                      />
+                      <label for="defensa">Defensa:</label>
+                      <input type="text" id="defensaIngresado" name="defensa"/>
                     </div>
                     <div class="stat">
-                      <label for="fisico"> Fisico:</label
-                      ><input type="text" id="fisicoIngresado" name="fisico" />
+                      <label for="fisico"> Fisico:</label>
+                      <input type="text" id="fisicoIngresado" name="fisico" />
                     </div>
                   </div>
                 </div>
               </form>
             </div>
             <div class="modal-footer">
-              <button
-                id="agregarCartaBtn"
-                class="btn btn-success"
-                data-bs-dismiss="modal"
-              >
+              <button id="agregarCartaBtn" class="btn btn-success" data-bs-dismiss="modal">
                 Agregar Jugador
               </button>
             </div>
@@ -377,17 +284,21 @@
         </div>
       </div>
     </main>
+
     <!-- Bosstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"
     ></script>
+
     <!-- SeetAlert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <!-- Archivos JS -->
     <script src="./js/class.js"></script>
     <script src="./js/script.js"></script>
     <script src="./js/inicio.js"></script>
+
   </body>
 </html>

@@ -1,3 +1,4 @@
+// CATALOGO
 class Carta {
   constructor(
     id,
@@ -86,7 +87,8 @@ if (localStorage.getItem("catalogo")) {
   console.log("Seteando catálogo de cartas");
   cargarCatalogo(catalogo);
 }
-
+//-----------------------------------------------------------------------------------------
+// Mi equipo
 let miEquipo = [];
 if (localStorage.getItem("miEquipo")) {
   miEquipo = JSON.parse(localStorage.getItem("miEquipo"));
@@ -95,7 +97,8 @@ if (localStorage.getItem("miEquipo")) {
   miEquipo.push();
   localStorage.setItem("miEquipo", JSON.stringify(miEquipo));
 }
-
+//-----------------------------------------------------------------------------------------
+// billetera
 if (localStorage.getItem("valorBilletera")) {
   valorBilletera = JSON.parse(localStorage.getItem("valorBilletera"));
   billetera.textContent = valorBilletera.toString();

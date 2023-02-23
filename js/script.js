@@ -141,7 +141,9 @@ function agregarCarta(catalogo) {
     icon: "success",
     background: "black",
     confirmButtonText: "OK",
-    timer: 4100,
+    timer: 3100,
+    imageUrl: `${cartaNueva.img}`,
+    imageHeight: 100,
   });
   localStorage.setItem("catalogo", JSON.stringify(catalogo));
   //resetear los input
@@ -242,14 +244,12 @@ function agregarAEquipo(carta, precio) {
       title: "Jugador Comprado",
       text: `${carta.nombreApellido} ha sido comprado a ${carta.precio}
        has quedado con un total de ${valorBilletera}`,
-      // img: `${carta.img}`,  ARREGLAR
-      //imageHeight: 200,
       icon: "success",
       background: "black",
       confirmButtonText: "OK",
       timer: 4100,
       imageUrl: `../images/${carta.img}`,
-      imageHeight: 100
+      imageHeight: 100,
     });
   } else {
     Swal.fire({
@@ -259,7 +259,6 @@ function agregarAEquipo(carta, precio) {
       background: "black",
       confirmButtonText: "OK",
       timer: 4100,
-      
     });
   }
   localStorage.setItem("miEquipo", JSON.stringify(miEquipo));
@@ -284,7 +283,7 @@ function venderDeEquipo(carta, precio) {
     confirmButtonText: "OK",
     timer: 4100,
     imageUrl: `../images/${carta.img}`,
-    imageHeight: 100
+    imageHeight: 100,
   });
 }
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -355,10 +354,10 @@ mostrarTiendaBtn.addEventListener("click", () => {
 </div>
 
   `; //        PACK GRATIS
-  let claimButton = document.getElementById("claimButton")
-  claimButton.addEventListener("click", ()=>{
-    abrirPackGratis()
-  })
+  let claimButton = document.getElementById("claimButton");
+  claimButton.addEventListener("click", () => {
+    abrirPackGratis();
+  });
   // });//        PACK DE ORO
   let packOro = document.getElementById("packOro");
   packOro.addEventListener("click", () => {
@@ -371,25 +370,24 @@ mostrarTiendaBtn.addEventListener("click", () => {
   let packIcono = document.getElementById("packIcono");
   packIcono.addEventListener("click", () => {
     comprarPack(2000000, "icono");
-  });//         PACK UCL
+  }); //         PACK UCL
   let packUcl = document.getElementById("packUcl");
   packUcl.addEventListener("click", () => {
     comprarPack(950000, "ucl");
-  });//         PACK Fut Champs
+  }); //         PACK Fut Champs
   let packFut = document.getElementById("packFut");
   packFut.addEventListener("click", () => {
     comprarPack(1250000, "fut");
-  });//           PACK Otw
+  }); //           PACK Otw
   let packOtw = document.getElementById("packOtw");
   packOtw.addEventListener("click", () => {
     comprarPack(850000, "otw");
-  })// PACK Toty
+  }); // PACK Toty
   let packToty = document.getElementById("packToty");
   packToty.addEventListener("click", () => {
     comprarPack(3650000, "toty");
   });
-
-});  
+});
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //                                            PACKS OPENING
 function comprarPack(precio, calidad) {
@@ -404,51 +402,52 @@ function comprarPack(precio, calidad) {
     });
   } else {
     Swal.fire({
-    title: `Quieres comprar un paquete de ${calidad}`,
-    text: `El paquete te costara ${precio}` ,
-    icon: 'info',
-    showCancelButton: true,
-    background: "black",
-    confirmButtonText: "OK",
-    confirmButtonColor: '#7066e0',
-
-  }).then((result) => {
-    if (result.isConfirmed) {
-    valorBilletera -= precio;
-    billetera.textContent = valorBilletera.toString();
-    cartas.innerHTML = "";
-    titulo.innerHTML = "";
-    document.getElementById("animation-element").style.display = "flex";
-    setTimeout(() => {
-      const jugadoresFiltrados = catalogo.filter(
-        (carta) => carta.tipoDeCarta === calidad
-      );
-      const carta1 =
-        jugadoresFiltrados[
-          Math.floor(Math.random() * jugadoresFiltrados.length)
-        ];
-      const carta2 =
-        jugadoresFiltrados[
-          Math.floor(Math.random() * jugadoresFiltrados.length)
-        ];
-      const carta3 =
-        jugadoresFiltrados[
-          Math.floor(Math.random() * jugadoresFiltrados.length)
-        ];
-      const nuevasCartas = [carta1, carta2, carta3];
-      miEquipo.push(carta1, carta2, carta3);
-      localStorage.setItem("miEquipo", JSON.stringify(miEquipo));
-      localStorage.setItem("valorBilletera", valorBilletera.toString());
-      document.getElementById("animation-element").style.display = "none";
-      document.getElementById("animation-element-black").style.display = "flex";
-      setTimeout(() => {
-        mostrarCatalogo(nuevasCartas, "vender");
-        titulo.innerHTML = "Nuevos Jugadores";
-        document.getElementById("animation-element-black").style.display = "none";
-      }, 3800);
-    }, 4800);
-    }
-  })
+      title: `Quieres comprar un paquete de ${calidad}`,
+      text: `El paquete te costara ${precio}`,
+      icon: "info",
+      showCancelButton: true,
+      background: "black",
+      confirmButtonText: "OK",
+      confirmButtonColor: "#7066e0",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        valorBilletera -= precio;
+        billetera.textContent = valorBilletera.toString();
+        cartas.innerHTML = "";
+        titulo.innerHTML = "";
+        document.getElementById("animation-element").style.display = "flex";
+        setTimeout(() => {
+          const jugadoresFiltrados = catalogo.filter(
+            (carta) => carta.tipoDeCarta === calidad
+          );
+          const carta1 =
+            jugadoresFiltrados[
+              Math.floor(Math.random() * jugadoresFiltrados.length)
+            ];
+          const carta2 =
+            jugadoresFiltrados[
+              Math.floor(Math.random() * jugadoresFiltrados.length)
+            ];
+          const carta3 =
+            jugadoresFiltrados[
+              Math.floor(Math.random() * jugadoresFiltrados.length)
+            ];
+          const nuevasCartas = [carta1, carta2, carta3];
+          miEquipo.push(carta1, carta2, carta3);
+          localStorage.setItem("miEquipo", JSON.stringify(miEquipo));
+          localStorage.setItem("valorBilletera", valorBilletera.toString());
+          document.getElementById("animation-element").style.display = "none";
+          document.getElementById("animation-element-black").style.display =
+            "flex";
+          setTimeout(() => {
+            mostrarCatalogo(nuevasCartas, "vender");
+            titulo.innerHTML = "Nuevos Jugadores";
+            document.getElementById("animation-element-black").style.display =
+              "none";
+          }, 3800);
+        }, 4800);
+      }
+    });
   }
 }
 
@@ -457,24 +456,16 @@ function comprarPack(precio, calidad) {
 function abrirPackGratis() {
   const ahora = new Date();
   const fechaUltimoPack = new Date(localStorage.getItem("fechaUltimoPack"));
-    if (fechaUltimoPack && fechaUltimoPack.getDate() === ahora.getDate()) {
-      Swal.fire({
-        title: "Ya has abierto tu pack diario, volve mas tarde",
-        icon: "error",
-        background: "black",
-        confirmButtonText: "OK",
-        timer: 4100,
-      });
+  if (fechaUltimoPack && fechaUltimoPack.getDate() === ahora.getDate()) {
+    Swal.fire({
+      title: "Ya has abierto tu pack diario, volve mas tarde",
+      icon: "error",
+      background: "black",
+      confirmButtonText: "OK",
+      timer: 4100,
+    });
   } else {
     localStorage.setItem("fechaUltimoPack", ahora.toString());
     comprarPack(0, "oro");
   }
 }
-
-
-
-
-
-
-
-
