@@ -31,14 +31,15 @@ body {
   font-size: 1.6em;
   margin-left: 1em;
 }
-.margint {
-  padding-top: 7rem;
+.bodyContainer{
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  margin-top: 5em;
 }
 #cartas {
+  display: flex;
+  justify-content: space-between;
   margin-left: 4em;
 }
 @media screen and (max-width: 400px) {
